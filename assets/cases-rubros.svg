@@ -1,0 +1,15 @@
+<svg width="1200" height="420" viewBox="0 0 1200 420" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1200" height="420" rx="24" fill="#F1F5F9"/>
+  <rect x="70" y="90" width="240" height="240" rx="18" fill="white" stroke="#E2E8F0"/>
+  <rect x="350" y="90" width="240" height="240" rx="18" fill="white" stroke="#E2E8F0"/>
+  <rect x="630" y="90" width="240" height="240" rx="18" fill="white" stroke="#E2E8F0"/>
+  <rect x="910" y="90" width="240" height="240" rx="18" fill="white" stroke="#E2E8F0"/>
+  <circle cx="190" cy="170" r="34" fill="#FECACA"/>
+  <circle cx="470" cy="170" r="34" fill="#BFDBFE"/>
+  <circle cx="750" cy="170" r="34" fill="#FDE68A"/>
+  <circle cx="1030" cy="170" r="34" fill="#C7D2FE"/>
+  <text x="150" y="260" fill="#334155" font-size="20" font-family="Arial, sans-serif">Restaurantes</text>
+  <text x="430" y="260" fill="#334155" font-size="20" font-family="Arial, sans-serif">Clínicas</text>
+  <text x="680" y="260" fill="#334155" font-size="20" font-family="Arial, sans-serif">Servicios</text>
+  <text x="960" y="260" fill="#334155" font-size="20" font-family="Arial, sans-serif">Comercio</text>
+</svg>

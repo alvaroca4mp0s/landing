@@ -34,6 +34,10 @@ a {
   margin: 0 auto;
 }
 
+.doc-container {
+  max-width: 860px;
+}
+
 .site-header {
   position: sticky;
   top: 0;
@@ -69,8 +73,27 @@ a {
   padding-top: 72px;
 }
 
+.hero-layout {
+  display: grid;
+  gap: 18px;
+}
+
 .hero__content {
   max-width: 760px;
+}
+
+.section-image {
+  width: 100%;
+  height: auto;
+  display: block;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  background: #fff;
+}
+
+.section-image--banner {
+  margin: 0 0 16px;
 }
 
 .eyebrow {
@@ -249,6 +272,11 @@ h3 {
 @media (min-width: 760px) {
   .section {
     padding: 72px 0;
+  }
+
+  .hero-layout {
+    grid-template-columns: 1.05fr 0.95fr;
+    align-items: center;
   }
 
   .grid--2 {
