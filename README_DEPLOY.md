@@ -19,32 +19,29 @@ python3 -m http.server 8080
 
 Luego visita: `http://localhost:8080`
 
-## 2) Reemplazar placeholders obligatorios (1 línea c/u)
+## 2) Validaciones pre-deploy
 
-Antes de publicar, reemplaza estos valores:
+Antes de publicar, confirma estos puntos en `index.html`:
 
-1. **WhatsApp CTA** en `index.html`:
-   - Buscar: `56XXXXXXXXX`
-   - Reemplazar por número real en formato internacional (sin `+` ni espacios).
+1. **CTA WhatsApp**
+   - Verifica que el número en `https://wa.me/...` sea el definitivo.
 
-2. **Email de contacto** en `index.html`:
-   - Buscar: `contacto@redlocal.cl`
-   - Reemplazar si corresponde.
+2. **Email de contacto**
+   - Verifica que `mailto:` y el texto visible usen el correo oficial.
 
-3. **RUT opcional** en `index.html`:
-   - Buscar: `[RUT_OPCIONAL]`
-   - Completar o eliminar la línea.
-
-4. **Política/Términos**:
-   - Buscar: `[PENDIENTE]`
-   - Reemplazar por URLs reales.
+3. **Datos legales/footer**
+   - Verifica razón social, RUT y enlaces a política/términos.
 
 ## 3) Deploy al droplet con rsync
 
-Comando base solicitado:
+Comando recomendado (con exclusiones de archivos internos):
 
 ```bash
-rsync -avz --delete ./ root@IP_DEL_DROPLET:/var/www/redlocal.cl/
+rsync -avz --delete \
+  --exclude='.git/' \
+  --exclude='*.md' \
+  --exclude='.DS_Store' \
+  ./ root@IP_DEL_DROPLET:/var/www/redlocal.cl/
 ```
 
 ### Recomendación segura
@@ -52,7 +49,11 @@ rsync -avz --delete ./ root@IP_DEL_DROPLET:/var/www/redlocal.cl/
 Ejecuta primero en modo simulación para validar qué cambia:
 
 ```bash
-rsync -avzn --delete ./ root@IP_DEL_DROPLET:/var/www/redlocal.cl/
+rsync -avzn --delete \
+  --exclude='.git/' \
+  --exclude='*.md' \
+  --exclude='.DS_Store' \
+  ./ root@IP_DEL_DROPLET:/var/www/redlocal.cl/
 ```
 
 Luego, si está bien, corre el comando real sin `n`.
