@@ -1,0 +1,12 @@
+# OS
+.DS_Store
+
+# Remotion workspace (keep source, ignore generated/deps)
+remotion/node_modules/
+remotion/.cache/
+remotion/dist/
+remotion/out/
+remotion/.tmp/
+
+# Logs
+*.log
