@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>RedLocal.cl | Agente WhatsApp para PYMES en Chile</title>
-    <meta name="description" content="RedLocal implementa agentes de WhatsApp para PYMES en Chile: respuesta rápida, orden comercial y más leads. Producto cerrado, implementación estándar." />
+    <meta name="description" content="RedLocal implementa agentes de WhatsApp para PYMES en Chile: respuestas rápidas, mejor orden de conversaciones y más ventas. Producto cerrado e implementación estándar." />
     <meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1" />
     <link rel="canonical" href="https://redlocal.cl/" />
 
@@ -12,13 +12,16 @@
     <meta property="og:locale" content="es_CL" />
     <meta property="og:site_name" content="RedLocal.cl" />
     <meta property="og:title" content="RedLocal.cl | Agente WhatsApp para PYMES en Chile" />
-    <meta property="og:description" content="Atención comercial por WhatsApp para PYMES: más velocidad, orden y conversión." />
+    <meta property="og:description" content="Atención comercial por WhatsApp para PYMES: más velocidad, mejor orden y más ventas." />
     <meta property="og:url" content="https://redlocal.cl/" />
     <meta property="og:image" content="https://redlocal.cl/assets/hero-redlocal.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="RedLocal.cl - Agente WhatsApp para PYMES en Chile" />
 
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="RedLocal.cl | Agente WhatsApp para PYMES en Chile" />
-    <meta name="twitter:description" content="Implementación estándar, producto cerrado y foco en resultados comerciales." />
+    <meta name="twitter:description" content="Implementación estándar para ordenar conversaciones y vender más por WhatsApp." />
     <meta name="twitter:image" content="https://redlocal.cl/assets/hero-redlocal.png" />
 
     <link rel="icon" type="image/png" href="./assets/iso.png" />
@@ -28,43 +31,46 @@
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
-      "@type": "Organization",
-      "name": "RedLocal.cl",
-      "url": "https://redlocal.cl/",
-      "logo": "https://redlocal.cl/assets/iso.png",
-      "email": "hola@redlocal.cl",
-      "address": {
-        "@type": "PostalAddress",
-        "addressLocality": "Coquimbo",
-        "addressCountry": "CL"
-      }
-    }
-    </script>
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "Service",
-      "serviceType": "Implementación de agentes de WhatsApp para PYMES",
-      "provider": {
-        "@type": "Organization",
-        "name": "RedLocal.cl"
-      },
-      "areaServed": {
-        "@type": "Country",
-        "name": "Chile"
-      },
-      "offers": [
+      "@graph": [
         {
-          "@type": "Offer",
-          "name": "Plan Básico",
-          "priceCurrency": "CLP",
-          "price": "169900"
+          "@type": "Organization",
+          "@id": "https://redlocal.cl/#organization",
+          "name": "RedLocal.cl",
+          "url": "https://redlocal.cl/",
+          "logo": "https://redlocal.cl/assets/iso.png",
+          "email": "hola@redlocal.cl"
         },
         {
-          "@type": "Offer",
-          "name": "Plan Pro",
-          "priceCurrency": "CLP",
-          "price": "299900"
+          "@type": "WebSite",
+          "@id": "https://redlocal.cl/#website",
+          "url": "https://redlocal.cl/",
+          "name": "RedLocal.cl",
+          "inLanguage": "es-CL",
+          "publisher": { "@id": "https://redlocal.cl/#organization" }
+        },
+        {
+          "@type": "ProfessionalService",
+          "@id": "https://redlocal.cl/#service",
+          "name": "RedLocal.cl",
+          "url": "https://redlocal.cl/",
+          "areaServed": "Chile",
+          "telephone": "+56945818860",
+          "priceRange": "$$",
+          "sameAs": ["https://wa.me/56945818860"],
+          "offers": [
+            {"@type": "Offer", "name": "Plan Básico", "priceCurrency": "CLP", "price": "169900"},
+            {"@type": "Offer", "name": "Plan Pro", "priceCurrency": "CLP", "price": "299900"}
+          ]
+        },
+        {
+          "@type": "FAQPage",
+          "@id": "https://redlocal.cl/#faq",
+          "mainEntity": [
+            {"@type": "Question", "name": "¿Cuánto se demoran en implementarlo?", "acceptedAnswer": {"@type": "Answer", "text": "La implementación es estándar y suele quedar operativa en pocos días hábiles, según disponibilidad del número y validaciones de WhatsApp."}},
+            {"@type": "Question", "name": "¿Necesito cambiar mi número de WhatsApp?", "acceptedAnswer": {"@type": "Answer", "text": "No necesariamente. Evaluamos tu caso y, si cumple condiciones técnicas, trabajamos sobre tu número comercial actual."}},
+            {"@type": "Question", "name": "¿Esto reemplaza a mi equipo?", "acceptedAnswer": {"@type": "Answer", "text": "No. RedLocal automatiza lo repetitivo y ordena la atención. Tu equipo entra donde más aporta: cierres, casos complejos y seguimiento comercial."}},
+            {"@type": "Question", "name": "¿Qué diferencia hay entre Básico y Pro?", "acceptedAnswer": {"@type": "Answer", "text": "Básico te ordena la atención y te pone a producir rápido. Pro agrega mayor profundidad de flujos, seguimiento y ajustes continuos para vender con más consistencia."}}
+          ]
         }
       ]
     }
@@ -79,7 +85,7 @@
     <header class="site-header">
       <div class="container nav">
         <a class="brand" href="#inicio" aria-label="RedLocal.cl">
-          <img src="./assets/iso.png" alt="Isotipo RedLocal.cl" class="brand-logo brand-logo--isotipo" width="44" height="44" decoding="async" />
+          <img src="./assets/iso.webp" alt="Isotipo RedLocal.cl" class="brand-logo brand-logo--isotipo" width="44" height="44" decoding="async" />
           <span class="brand-wordmark"><span class="brand-red">Red</span><span class="brand-blue">Local.cl</span></span>
         </a>
         <a class="btn btn--ghost" href="#planes">Ver planes</a>
@@ -92,10 +98,9 @@
           <div class="hero__content reveal">
             <p class="eyebrow">Atención comercial para PYMES en Chile</p>
             <h1>Tu WhatsApp responde al instante y convierte mejor</h1>
-            <p class="lead">Producto cerrado, implementación rápida y operación escalable para no perder leads por demora.</p>
+            <p class="lead">Producto cerrado, implementación rápida y operación escalable para atender más conversaciones y convertir más ventas, sin aumentar tu carga diaria.</p>
             <div class="cta-group">
               <a class="btn btn--primary" href="https://wa.me/56945818860?text=Hola%20RedLocal,%20quiero%20una%20demo" target="_blank" rel="noopener noreferrer">Quiero una demo por WhatsApp</a>
-              <a class="btn btn--secondary" href="mailto:hola@redlocal.cl">Escríbenos por email</a>
             </div>
           </div>
 
@@ -109,7 +114,7 @@
             </div>
             <div class="metrics-row">
               <div><span class="counter" data-target="18">0</span><small>seg resp.</small></div>
-              <div><span class="counter" data-target="37">0</span><small>leads/mes</small></div>
+              <div><span class="counter" data-target="37">0</span><small>consultas/mes</small></div>
               <div><span class="counter" data-target="12">0</span><small>derivaciones</small></div>
             </div>
           </div>
@@ -121,7 +126,7 @@
           <h2 class="reveal">El problema de muchas PYMES</h2>
           <div class="grid grid--2">
             <article class="card reveal"><h3>Respuestas tardías</h3><p>El cliente pregunta ahora, no en 3 horas más.</p></article>
-            <article class="card reveal"><h3>Leads sin seguimiento</h3><p>Consultas mezcladas y sin prioridad comercial.</p></article>
+            <article class="card reveal"><h3>Consultas sin seguimiento</h3><p>Mensajes mezclados y sin prioridad comercial.</p></article>
             <article class="card reveal"><h3>Equipo saturado</h3><p>Mucho tiempo en preguntas repetidas.</p></article>
             <article class="card reveal"><h3>Orden comercial débil</h3><p>Sin proceso claro, cuesta medir y mejorar.</p></article>
           </div>
@@ -133,7 +138,7 @@
           <h2 class="reveal">La solución: Agente WhatsApp RedLocal</h2>
           <ul class="list reveal">
             <li><strong>Bienvenida automática</strong> + menú estructurado.</li>
-            <li><strong>Calificación de lead</strong> con reglas claras.</li>
+            <li><strong>Clasificación de consultas</strong> con reglas claras.</li>
             <li><strong>Derivación humana</strong> cuando corresponde.</li>
             <li><strong>Reporte mensual</strong> para mejorar conversión.</li>
           </ul>
@@ -153,34 +158,108 @@
 
       <section class="section section--alt" id="casos">
         <div class="container">
-          <h2 class="reveal">Casos de uso</h2>
-          <div class="carousel" id="cases-carousel">
-            <button class="carousel-btn" data-dir="prev" aria-label="Caso anterior" type="button">‹</button>
-            <div class="carousel-track">
-              <article class="carousel-item active"><h3>Restaurantes</h3><p>Reservas, horarios, consultas frecuentes.</p></article>
-              <article class="carousel-item"><h3>Clínicas</h3><p>Preconsulta y derivación a agenda humana.</p></article>
-              <article class="carousel-item"><h3>Talleres / Servicios</h3><p>Calificación rápida por tipo de requerimiento.</p></article>
-              <article class="carousel-item"><h3>Comercio</h3><p>Stock, despacho y postventa básica.</p></article>
-            </div>
-            <button class="carousel-btn" data-dir="next" aria-label="Siguiente caso" type="button">›</button>
+          <h2 class="reveal">Casos de uso reales para negocios locales</h2>
+          <p class="muted reveal">Mismo motor, implementación estándar y respuestas adaptadas por rubro, sin desarrollos custom.</p>
+          <div class="grid grid--3 cases-grid">
+            <article class="card reveal">
+              <h3>Carnicerías y alimentos</h3>
+              <p>Responde por cortes, precios del día, disponibilidad y reservas de pedidos por WhatsApp.</p>
+            </article>
+            <article class="card reveal">
+              <h3>Talleres mecánicos</h3>
+              <p>Precalifica fallas, ordena solicitudes y deriva al técnico con contexto del vehículo.</p>
+            </article>
+            <article class="card reveal">
+              <h3>Peluquerías y barberías</h3>
+              <p>Gestiona horas, confirma asistencia y resuelve dudas frecuentes de servicios.</p>
+            </article>
+            <article class="card reveal">
+              <h3>Tiendas de mascotas</h3>
+              <p>Atiende stock de alimentos/accesorios y coordina retiro o despacho rápidamente.</p>
+            </article>
+            <article class="card reveal">
+              <h3>Librerías</h3>
+              <p>Confirma disponibilidad de títulos, encargos y horarios sin saturar al equipo.</p>
+            </article>
+            <article class="card reveal">
+              <h3>Útiles escolares</h3>
+              <p>Toma listas de compra, confirma productos y acelera ventas en temporada alta.</p>
+            </article>
           </div>
+        </div>
+      </section>
+
+      <section class="section" id="diferencia">
+        <div class="container">
+          <h2 class="reveal">No vendemos solo una plataforma. Vendemos operación comercial funcionando.</h2>
+          <div class="grid grid--3">
+            <article class="card reveal">
+              <h3>Implementación guiada</h3>
+              <p>No te dejamos solo con un panel. Configuramos contigo el flujo para salir a producir rápido.</p>
+            </article>
+            <article class="card reveal">
+              <h3>Mensajes pensados para vender</h3>
+              <p>Cada respuesta y derivación está diseñada para ordenar la atención y ayudarte a cerrar más ventas, no solo para "contestar".</p>
+            </article>
+            <article class="card reveal">
+              <h3>Mejora continua</h3>
+              <p>Revisamos desempeño y ajustamos el sistema para sostener resultados, con estándar estable y escalable.</p>
+            </article>
+          </div>
+          <p class="muted reveal">Si buscas solo software barato, hay alternativas. Si buscas resultados comerciales con ejecución seria, esa es la diferencia RedLocal.</p>
         </div>
       </section>
 
       <section class="section" id="planes">
         <div class="container">
-          <h2 class="reveal">Planes</h2>
+          <h2 class="reveal">Elige cómo quieres atender mejor y vender más por WhatsApp</h2>
           <div class="grid grid--2">
             <article class="card plan reveal">
               <h3>Básico</h3>
               <p class="price">Desde <strong>$169.900 CLP</strong> / mes (IVA incluido)</p>
-              <ul class="list list--compact"><li>Flujo base WhatsApp</li><li>FAQs + derivación</li><li>Soporte por correo</li></ul>
+              <p class="muted">Ideal si quieres ordenar tu WhatsApp comercial y responder bien desde ya.</p>
+              <ul class="list list--compact">
+                <li>Configuración inicial del agente en tu número</li>
+                <li>Respuestas automáticas para preguntas frecuentes</li>
+                <li>Derivación a persona cuando corresponde</li>
+                <li>Soporte por correo para ajustes operativos</li>
+              </ul>
             </article>
             <article class="card plan plan--featured reveal">
               <h3>Pro</h3>
               <p class="price">Desde <strong>$299.900 CLP</strong> / mes (IVA incluido)</p>
-              <ul class="list list--compact"><li>Todo lo de Básico</li><li>Flujos avanzados</li><li>Reporte y optimización</li></ul>
+              <p class="muted">Para negocios con más demanda que necesitan más control y mejor seguimiento comercial.</p>
+              <ul class="list list--compact">
+                <li>Incluye todo lo del plan Básico</li>
+                <li>Flujos avanzados por tipo de cliente o servicio</li>
+                <li>Reporte mensual para detectar mejoras concretas</li>
+                <li>Ajustes continuos para vender con más consistencia</li>
+              </ul>
             </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section section--alt" id="faq">
+        <div class="container">
+          <h2 class="reveal">Preguntas frecuentes</h2>
+          <div class="faq-list reveal">
+            <details class="faq-item">
+              <summary>¿Cuánto se demoran en implementarlo?</summary>
+              <p>La implementación es estándar y suele quedar operativa en pocos días hábiles, según disponibilidad del número y validaciones de WhatsApp.</p>
+            </details>
+            <details class="faq-item">
+              <summary>¿Necesito cambiar mi número de WhatsApp?</summary>
+              <p>No necesariamente. Evaluamos tu caso y, si cumple condiciones técnicas, trabajamos sobre tu número comercial actual.</p>
+            </details>
+            <details class="faq-item">
+              <summary>¿Esto reemplaza a mi equipo?</summary>
+              <p>No. RedLocal automatiza lo repetitivo y ordena la atención. Tu equipo entra donde más aporta: cierres, casos complejos y seguimiento comercial.</p>
+            </details>
+            <details class="faq-item">
+              <summary>¿Qué diferencia hay entre Básico y Pro?</summary>
+              <p>Básico te ordena la atención y te pone a producir rápido. Pro agrega mayor profundidad de flujos, seguimiento y ajustes continuos para vender con más consistencia.</p>
+            </details>
           </div>
         </div>
       </section>
@@ -190,9 +269,9 @@
           <h2>¿Listo para responder más rápido y vender mejor?</h2>
           <p>Te mostramos una demo aterrizada a tu operación.</p>
           <div class="cta-group">
-            <a class="btn btn--primary" href="https://wa.me/56945818860?text=Hola%20RedLocal,%20quiero%20una%20demo" target="_blank" rel="noopener noreferrer">Hablar por WhatsApp</a>
-            <a class="btn btn--secondary" href="mailto:hola@redlocal.cl">hola@redlocal.cl</a>
+            <a class="btn btn--primary" href="https://wa.me/56945818860?text=Hola%20RedLocal,%20quiero%20una%20demo" target="_blank" rel="noopener noreferrer">Hablar por WhatsApp ahora</a>
           </div>
+          <p class="muted">Atención y diagnóstico inicial directo por WhatsApp. Sin formularios largos.</p>
         </div>
       </section>
     </main>
@@ -201,7 +280,7 @@
       <div class="container footer-grid">
         <div class="footer-col footer-col--brand">
           <p class="footer-brand">
-            <img src="./assets/iso.png" alt="Isotipo RedLocal.cl" class="footer-logo" width="52" height="52" loading="lazy" decoding="async" />
+            <img src="./assets/iso.webp" alt="Isotipo RedLocal.cl" class="footer-logo" width="52" height="52" loading="lazy" decoding="async" />
             <span><small>Soluciones de atención comercial por WhatsApp para PYMES.</small></span>
           </p>
         </div>
