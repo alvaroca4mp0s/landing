@@ -77,6 +77,7 @@
     </script>
 
     <link rel="stylesheet" href="./styles.css" />
+    <script defer data-domain="redlocal.cl" src="https://plausible.io/js/script.file-downloads.outbound-links.js"></script>
     <script>
       document.documentElement.classList.add('js');
     </script>
@@ -88,7 +89,7 @@
           <img src="./assets/iso.webp" alt="Isotipo RedLocal.cl" class="brand-logo brand-logo--isotipo" width="44" height="44" decoding="async" />
           <span class="brand-wordmark"><span class="brand-red">Red</span><span class="brand-blue">Local.cl</span></span>
         </a>
-        <a class="btn btn--ghost" href="#planes">Ver planes</a>
+        <a class="btn btn--ghost" href="#planes" data-track="cta_click" data-track-location="header" data-track-label="Ver planes">Ver planes</a>
       </div>
     </header>
 
@@ -100,7 +101,7 @@
             <h1>Vende más por WhatsApp, sin trabajar el doble</h1>
             <p class="lead">Respondemos al instante para que no se te escapen clientes, mientras tú sigues atendiendo tu negocio.</p>
             <div class="cta-group">
-              <a class="btn btn--primary" href="https://wa.me/56945818860?text=Hola%20RedLocal,%20quiero%20una%20demo" target="_blank" rel="noopener noreferrer">Quiero una demo por WhatsApp</a>
+              <a class="btn btn--primary" href="https://wa.me/56945818860?text=Hola%20RedLocal,%20quiero%20una%20demo" target="_blank" rel="noopener noreferrer" data-track="whatsapp_click" data-track-location="hero" data-track-label="Quiero una demo por WhatsApp">Quiero una demo por WhatsApp</a>
             </div>
           </div>
 
@@ -269,7 +270,7 @@
           <h2>¿Quieres vender más por WhatsApp desde esta semana?</h2>
           <p>Te mostramos cómo aplicarlo a tu negocio, en simple y sin enredos.</p>
           <div class="cta-group">
-            <a class="btn btn--primary" href="https://wa.me/56945818860?text=Hola%20RedLocal,%20quiero%20una%20demo" target="_blank" rel="noopener noreferrer">Quiero una demo por WhatsApp</a>
+            <a class="btn btn--primary" href="https://wa.me/56945818860?text=Hola%20RedLocal,%20quiero%20una%20demo" target="_blank" rel="noopener noreferrer" data-track="whatsapp_click" data-track-location="cta_final" data-track-label="Quiero una demo por WhatsApp">Quiero una demo por WhatsApp</a>
           </div>
           <p class="muted">Sin compromiso. Te respondemos directo por WhatsApp.</p>
         </div>
@@ -291,6 +292,7 @@
       </div>
     </footer>
 
+    <script src="./tracking.js"></script>
     <script src="./script.js"></script>
   </body>
 </html>
