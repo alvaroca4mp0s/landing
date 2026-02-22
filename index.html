@@ -3,14 +3,85 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>RedLocal.cl | Agente WhatsApp para PYMES</title>
-    <meta name="description" content="Automatiza la atención por WhatsApp de tu pyme con RedLocal: respuestas rápidas, mejor seguimiento y más ventas." />
+    <title>RedLocal.cl | Agente WhatsApp para PYMES en Chile</title>
+    <meta name="description" content="RedLocal implementa agentes de WhatsApp para PYMES en Chile: respuesta rápida, orden comercial y más leads. Producto cerrado, implementación estándar." />
+    <meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1" />
+    <link rel="canonical" href="https://redlocal.cl/" />
+
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="es_CL" />
+    <meta property="og:site_name" content="RedLocal.cl" />
+    <meta property="og:title" content="RedLocal.cl | Agente WhatsApp para PYMES en Chile" />
+    <meta property="og:description" content="Atención comercial por WhatsApp para PYMES: más velocidad, orden y conversión." />
+    <meta property="og:url" content="https://redlocal.cl/" />
+    <meta property="og:image" content="https://redlocal.cl/assets/hero-redlocal.png" />
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="RedLocal.cl | Agente WhatsApp para PYMES en Chile" />
+    <meta name="twitter:description" content="Implementación estándar, producto cerrado y foco en resultados comerciales." />
+    <meta name="twitter:image" content="https://redlocal.cl/assets/hero-redlocal.png" />
+
+    <link rel="icon" type="image/png" href="./assets/iso.png" />
+    <link rel="apple-touch-icon" href="./assets/iso.png" />
+    <link rel="manifest" href="./manifest.webmanifest" />
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "RedLocal.cl",
+      "url": "https://redlocal.cl/",
+      "logo": "https://redlocal.cl/assets/iso.png",
+      "email": "hola@redlocal.cl",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Coquimbo",
+        "addressCountry": "CL"
+      }
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Service",
+      "serviceType": "Implementación de agentes de WhatsApp para PYMES",
+      "provider": {
+        "@type": "Organization",
+        "name": "RedLocal.cl"
+      },
+      "areaServed": {
+        "@type": "Country",
+        "name": "Chile"
+      },
+      "offers": [
+        {
+          "@type": "Offer",
+          "name": "Plan Básico",
+          "priceCurrency": "CLP",
+          "price": "169900"
+        },
+        {
+          "@type": "Offer",
+          "name": "Plan Pro",
+          "priceCurrency": "CLP",
+          "price": "299900"
+        }
+      ]
+    }
+    </script>
+
     <link rel="stylesheet" href="./styles.css" />
+    <script>
+      document.documentElement.classList.add('js');
+    </script>
   </head>
   <body>
     <header class="site-header">
       <div class="container nav">
-        <a class="brand" href="#inicio">RedLocal.cl</a>
+        <a class="brand" href="#inicio" aria-label="RedLocal.cl">
+          <img src="./assets/iso.png" alt="Isotipo RedLocal.cl" class="brand-logo brand-logo--isotipo" width="44" height="44" decoding="async" />
+          <span class="brand-wordmark"><span class="brand-red">Red</span><span class="brand-blue">Local.cl</span></span>
+        </a>
         <a class="btn btn--ghost" href="#planes">Ver planes</a>
       </div>
     </header>
@@ -84,14 +155,14 @@
         <div class="container">
           <h2 class="reveal">Casos de uso</h2>
           <div class="carousel" id="cases-carousel">
-            <button class="carousel-btn" data-dir="prev">‹</button>
+            <button class="carousel-btn" data-dir="prev" aria-label="Caso anterior" type="button">‹</button>
             <div class="carousel-track">
               <article class="carousel-item active"><h3>Restaurantes</h3><p>Reservas, horarios, consultas frecuentes.</p></article>
               <article class="carousel-item"><h3>Clínicas</h3><p>Preconsulta y derivación a agenda humana.</p></article>
               <article class="carousel-item"><h3>Talleres / Servicios</h3><p>Calificación rápida por tipo de requerimiento.</p></article>
               <article class="carousel-item"><h3>Comercio</h3><p>Stock, despacho y postventa básica.</p></article>
             </div>
-            <button class="carousel-btn" data-dir="next">›</button>
+            <button class="carousel-btn" data-dir="next" aria-label="Siguiente caso" type="button">›</button>
           </div>
         </div>
       </section>
@@ -128,9 +199,16 @@
 
     <footer class="site-footer">
       <div class="container footer-grid">
-        <p><strong>RedLocal.cl</strong> · Soluciones de atención comercial por WhatsApp para PYMES.</p>
-        <p>Contacto: <a href="mailto:hola@redlocal.cl">hola@redlocal.cl</a></p>
-        <p><a href="./politica-privacidad.html">Política de privacidad</a> · <a href="./terminos-condiciones.html">Términos y condiciones</a></p>
+        <div class="footer-col footer-col--brand">
+          <p class="footer-brand">
+            <img src="./assets/iso.png" alt="Isotipo RedLocal.cl" class="footer-logo" width="52" height="52" loading="lazy" decoding="async" />
+            <span><small>Soluciones de atención comercial por WhatsApp para PYMES.</small></span>
+          </p>
+        </div>
+        <div class="footer-col footer-col--links">
+          <p>Contacto: <a href="mailto:hola@redlocal.cl">hola@redlocal.cl</a></p>
+          <p><a href="./politica-privacidad.html">Política de privacidad</a> · <a href="./terminos-condiciones.html">Términos y condiciones</a></p>
+        </div>
       </div>
     </footer>
 

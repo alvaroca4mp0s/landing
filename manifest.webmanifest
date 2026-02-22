@@ -1,0 +1,15 @@
+{
+  "name": "RedLocal.cl",
+  "short_name": "RedLocal",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#f5f6f8",
+  "theme_color": "#1E4F9C",
+  "icons": [
+    {
+      "src": "/assets/iso.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}
