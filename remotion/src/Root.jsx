@@ -62,8 +62,8 @@ const Page = ({title, subtitle, accent = '#22c55e', blocks = []}) => (
 
 const Hero = () => (
   <Page
-    title="Tu WhatsApp responde al instante y ordena la atención comercial"
-    subtitle="RedLocal convierte consultas en oportunidades con una operación simple y escalable para PYMES"
+    title="Vende más por WhatsApp, sin trabajar el doble"
+    subtitle="Respondemos al instante para que no se te escapen clientes, mientras tú sigues atendiendo tu negocio"
     accent="#22c55e"
     blocks={[
       {icon: '💬', title: 'Respuesta inmediata', body: 'El cliente recibe atención al momento, incluso fuera de horario.', badge: '#dcfce7'},
