@@ -10,3 +10,6 @@ remotion/.tmp/
 
 # Logs
 *.log
+
+# Deploy output
+dist/

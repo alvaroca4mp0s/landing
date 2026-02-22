@@ -32,7 +32,19 @@ Antes de publicar, confirma estos puntos en `index.html`:
 3. **Datos legales/footer**
    - Verifica razón social, RUT y enlaces a política/términos.
 
-## 3) Deploy al droplet con rsync
+## 3) Generar carpeta `dist/` (publicable)
+
+Para evitar subir archivos de trabajo, construye una carpeta mínima:
+
+```bash
+cd /home/alvaro/Projects/redlocal-landing
+rm -rf dist
+mkdir -p dist/assets
+cp index.html styles.css script.js politica-privacidad.html terminos-condiciones.html dist/
+cp assets/iso-256.png dist/assets/
+```
+
+## 4) Deploy al droplet con rsync
 
 Comando recomendado (con exclusiones de archivos internos):
 
@@ -41,7 +53,7 @@ rsync -avz --delete \
   --exclude='.git/' \
   --exclude='*.md' \
   --exclude='.DS_Store' \
-  ./ root@IP_DEL_DROPLET:/var/www/redlocal.cl/
+  ./dist/ root@IP_DEL_DROPLET:/var/www/redlocal.cl/
 ```
 
 ### Recomendación segura
@@ -53,12 +65,12 @@ rsync -avzn --delete \
   --exclude='.git/' \
   --exclude='*.md' \
   --exclude='.DS_Store' \
-  ./ root@IP_DEL_DROPLET:/var/www/redlocal.cl/
+  ./dist/ root@IP_DEL_DROPLET:/var/www/redlocal.cl/
 ```
 
 Luego, si está bien, corre el comando real sin `n`.
 
-## 4) Permisos en servidor (si corresponde)
+## 5) Permisos en servidor (si corresponde)
 
 Si Nginx/Apache sirve como `www-data`, asegúrate de dueño y permisos:
 
@@ -68,7 +80,7 @@ find /var/www/redlocal.cl -type d -exec chmod 755 {} \;
 find /var/www/redlocal.cl -type f -exec chmod 644 {} \;
 ```
 
-## 5) Checklist post-deploy
+## 6) Checklist post-deploy
 
 - [ ] `https://redlocal.cl` carga sin errores
 - [ ] CTA WhatsApp abre conversación correcta

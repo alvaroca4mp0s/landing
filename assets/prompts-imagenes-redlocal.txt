@@ -1,0 +1,81 @@
+# Prompts de imágenes - RedLocal.cl
+
+## 1) HERO (landing principal)
+- Dimensiones: 1920x1080 px
+- Resolución: 72 dpi (web)
+- Formato sugerido: PNG o WebP
+
+Prompt:
+Crear imagen estilo SaaS B2B moderno para RedLocal.cl.
+Escena: dueña/o de pyme chilena usando WhatsApp Web en notebook, entorno oficina limpio, luz natural, estética profesional.
+Incluir en la composición visual: flujo cliente -> respuesta automática -> lead calificado.
+Colores dominantes: azul #0EA5E9, verde #22C55E, blanco.
+Sin logos de terceros, sin marcas registradas, sin texto incrustado, sin watermark.
+Estilo: realista editorial, limpio, confiable, minimalista.
+Relación de aspecto horizontal 16:9.
+Tamaño exacto: 1920x1080 px, 72 dpi.
+
+---
+
+## 2) PROBLEMA (dolores PYMES)
+- Dimensiones: 1600x900 px
+- Resolución: 72 dpi
+- Formato sugerido: PNG o WebP
+
+Prompt:
+Crear ilustración semirrealista para sección "Problema" de landing SaaS.
+Representar 4 dolores de pymes en atención WhatsApp: respuestas tardías, desorden comercial, leads perdidos, equipo saturado.
+Usar metáforas visuales claras (reloj, bandeja desordenada, embudo con fugas, equipo sobrecargado).
+Estética corporativa moderna, fondo limpio, alto contraste, composición ordenada.
+Paleta: grises suaves + acentos azul #0EA5E9 y rojo suave de alerta.
+Sin texto incrustado, sin logos, sin marcas.
+Tamaño exacto: 1600x900 px, 72 dpi.
+
+---
+
+## 3) SOLUCIÓN (agente WhatsApp)
+- Dimensiones: 1600x900 px
+- Resolución: 72 dpi
+- Formato sugerido: PNG o WebP
+
+Prompt:
+Crear visual para sección "Solución" de RedLocal.
+Mostrar flujo en 3 etapas: entrada de consulta, calificación automática, derivación a humano.
+Estilo dashboard + chat, moderno, limpio, B2B.
+Debe transmitir rapidez, orden y escalabilidad.
+Paleta principal: verde #22C55E, azul #0EA5E9, blanco.
+Sin texto incrustado, sin logos, sin watermark.
+Formato horizontal 16:9.
+Tamaño exacto: 1600x900 px, 72 dpi.
+
+---
+
+## 4) CASOS DE USO (4 rubros)
+- Dimensiones: 1600x900 px
+- Resolución: 72 dpi
+- Formato sugerido: PNG o WebP
+
+Prompt:
+Crear imagen en cuadrantes para casos de uso de RedLocal:
+1) restaurantes, 2) clínicas, 3) talleres/servicios, 4) comercio/ferreterías.
+Cada cuadrante con iconografía y escena ligera del rubro, estilo consistente.
+Diseño minimalista, corporativo, atractivo para landing.
+Paleta coherente: azul #0EA5E9, verde #22C55E, neutros.
+Sin texto incrustado, sin logos, sin marcas registradas.
+Tamaño exacto: 1600x900 px, 72 dpi.
+
+---
+
+## 5) CTA FINAL (cierre comercial)
+- Dimensiones: 1920x800 px
+- Resolución: 72 dpi
+- Formato sugerido: PNG o WebP
+
+Prompt:
+Crear banner de cierre para landing RedLocal.
+Escena: smartphone con chat de WhatsApp + indicador de conversión/lead aprobado.
+Sensación: confianza, velocidad y decisión de compra.
+Estilo visual limpio, premium, B2B.
+Paleta: azul #0EA5E9, verde #22C55E, fondo claro.
+Sin texto incrustado, sin logos externos, sin watermark.
+Tamaño exacto: 1920x800 px, 72 dpi.
