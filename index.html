@@ -59,8 +59,8 @@
           "priceRange": "$$",
           "sameAs": ["https://wa.me/56945818860"],
           "offers": [
-            {"@type": "Offer", "name": "Plan Básico RestoRdL", "priceCurrency": "CLP", "price": "169900"},
-            {"@type": "Offer", "name": "Plan Pro RestoRdL", "priceCurrency": "CLP", "price": "299900"}
+            {"@type": "Offer", "name": "Plan Inicio RestoRdL", "priceCurrency": "CLP", "price": "49000"},
+            {"@type": "Offer", "name": "Plan Negocio RestoRdL", "priceCurrency": "CLP", "price": "79000"}
           ]
         },
         {
@@ -70,7 +70,7 @@
             {"@type": "Question", "name": "¿Cuánto se demoran en implementarlo?", "acceptedAnswer": {"@type": "Answer", "text": "RestoRdL suele quedar operativo en pocos días hábiles, según disponibilidad del número y validaciones de WhatsApp."}},
             {"@type": "Question", "name": "¿Sirve si mi restaurante no trabaja solo con reservas?", "acceptedAnswer": {"@type": "Answer", "text": "Sí. También responde horario, ubicación, carta y consultas frecuentes. La invitación a reservar es opcional."}},
             {"@type": "Question", "name": "¿Necesito cambiar mi número de WhatsApp?", "acceptedAnswer": {"@type": "Answer", "text": "No necesariamente. Evaluamos tu caso y, si cumple condiciones técnicas, trabajamos sobre tu número comercial actual."}},
-            {"@type": "Question", "name": "¿Qué diferencia hay entre Básico y Pro?", "acceptedAnswer": {"@type": "Answer", "text": "Básico es ideal para responder consultas y ordenar reservas. Pro agrega flujos más completos y mejoras continuas para aumentar reservas."}}
+            {"@type": "Question", "name": "¿Qué diferencia hay entre Inicio, Negocio y Premium?", "acceptedAnswer": {"@type": "Answer", "text": "Inicio cubre respuestas inmediatas e información esencial. Negocio suma reservas, recordatorios y seguimiento simple. Premium es para más de un local o alto volumen, con soporte prioritario y onboarding 1:1."}}
           ]
         }
       ]
@@ -261,28 +261,50 @@
       <section class="section" id="planes">
         <div class="container">
           <h2 class="reveal">Planes simples para empezar</h2>
-          <div class="grid grid--2">
+          <div class="grid grid--3">
             <article class="card plan reveal">
-              <h3>Básico</h3>
-              <p class="price">Desde <strong>$169.900 CLP</strong> / mes (IVA incluido)</p>
-              <p class="muted">Ideal para responder consultas y ordenar reservas.</p>
+              <h3>Inicio</h3>
+              <p class="price"><strong>$49.000</strong> / mes</p>
+              <p class="muted">Responde al instante y no pierdas clientes.</p>
               <ul class="list list--compact">
-                <li>Configuración inicial del agente en tu número</li>
-                <li>Respuestas automáticas para preguntas frecuentes</li>
-                <li>Derivación a persona cuando corresponde</li>
-                <li>Soporte por correo para ajustes operativos</li>
+                <li>Respuestas automáticas: horario, ubicación, formas de pago y consultas frecuentes</li>
+                <li>Envío de menú/carta (texto o PDF)</li>
+                <li>Respuestas inmediatas por WhatsApp</li>
+                <li>Configuración inicial guiada (checklist)</li>
               </ul>
+              <div class="cta-group plan-cta">
+                <a class="btn btn--primary" href="https://wa.me/56945818860?text=Hola%20RedLocal,%20quiero%20empezar%20con%20el%20plan%20Inicio%20de%20RestoRdL" target="_blank" rel="noopener noreferrer" data-track="whatsapp_click" data-track-location="planes" data-track-label="Empezar Inicio">Empezar</a>
+              </div>
             </article>
             <article class="card plan plan--featured reveal">
-              <h3>Pro</h3>
-              <p class="price">Desde <strong>$299.900 CLP</strong> / mes (IVA incluido)</p>
-              <p class="muted">Flujos más completos + mejoras continuas para aumentar reservas.</p>
+              <p class="eyebrow plan-badge">Recomendado</p>
+              <h3>Negocio</h3>
+              <p class="price"><strong>$79.000</strong> / mes</p>
+              <p class="muted">Responde + toma reservas y confirma: cierra más ventas.</p>
               <ul class="list list--compact">
-                <li>Incluye todo lo del plan Básico</li>
-                <li>Flujos avanzados por tipo de cliente o servicio</li>
-                <li>Reporte mensual para detectar mejoras concretas</li>
-                <li>Ajustes continuos para vender con más consistencia</li>
+                <li>Todo lo del plan Inicio</li>
+                <li>Registro de reservas (nombre, hora, personas, teléfono)</li>
+                <li>Recordatorios automáticos de reserva (reduce ausencias)</li>
+                <li>Seguimiento simple de conversaciones (nuevo / reserva / listo)</li>
+                <li>Soporte preferente</li>
               </ul>
+              <div class="cta-group plan-cta">
+                <a class="btn btn--primary" href="https://wa.me/56945818860?text=Hola%20RedLocal,%20quiero%20empezar%20con%20el%20plan%20Negocio%20de%20RestoRdL" target="_blank" rel="noopener noreferrer" data-track="whatsapp_click" data-track-location="planes" data-track-label="Elegir Negocio">Elegir Negocio</a>
+              </div>
+            </article>
+            <article class="card plan reveal">
+              <h3>Premium</h3>
+              <p class="price"><strong>A cotizar</strong></p>
+              <p class="muted">Para más de un local o alto volumen: operación con soporte prioritario.</p>
+              <ul class="list list--compact">
+                <li>Para 2+ sucursales o alto volumen</li>
+                <li>Onboarding 1:1</li>
+                <li>Soporte prioritario</li>
+                <li>Reporte mensual</li>
+              </ul>
+              <div class="cta-group plan-cta">
+                <a class="btn btn--secondary" href="https://wa.me/56945818860?text=Hola%20RedLocal,%20quiero%20cotizar%20el%20plan%20Premium%20de%20RestoRdL" target="_blank" rel="noopener noreferrer" data-track="whatsapp_click" data-track-location="planes" data-track-label="Cotizar Premium">Cotizar</a>
+              </div>
             </article>
           </div>
           <div class="cta-group" style="margin-top: 18px; justify-content: center;">
@@ -308,8 +330,8 @@
               <p>No necesariamente. Evaluamos tu caso y, si cumple condiciones técnicas, trabajamos sobre tu número comercial actual.</p>
             </details>
             <details class="faq-item">
-              <summary>¿Qué diferencia hay entre Básico y Pro?</summary>
-              <p>Básico es ideal para responder consultas y ordenar reservas. Pro agrega flujos más completos y mejoras continuas para aumentar reservas.</p>
+              <summary>¿Qué diferencia hay entre Inicio, Negocio y Premium?</summary>
+              <p>Inicio cubre respuestas inmediatas e información esencial. Negocio suma reservas, recordatorios y seguimiento simple. Premium es para más de un local o alto volumen, con soporte prioritario y onboarding 1:1.</p>
             </details>
           </div>
         </div>
