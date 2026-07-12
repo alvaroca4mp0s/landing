@@ -1,0 +1,49 @@
+name: CI
+
+# Corre en cada PR hacia main y en cada push a main.
+# Marca este check como "requerido" en la protección de rama para que
+# código que no pase (lint · build · typecheck · test) no pueda llegar a
+# main y, por lo tanto, no se despliegue a producción vía Cloudflare Pages.
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+permissions:
+  contents: read
+
+# Cancela corridas antiguas de la misma rama si llega un push nuevo.
+concurrency:
+  group: ci-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Configurar Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+          cache: npm
+
+      - name: Instalar dependencias
+        run: npm ci
+
+      - name: Lint
+        run: npm run lint
+
+      # El build va antes del typecheck: Next genera next-env.d.ts y los
+      # tipos de rutas durante el build, y el typecheck los necesita.
+      - name: Build
+        run: npm run build
+
+      - name: Typecheck
+        run: npm run typecheck
+
+      - name: Tests
+        run: npm test
