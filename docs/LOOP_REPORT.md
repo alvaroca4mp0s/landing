@@ -154,3 +154,36 @@ Verificar el sitio en navegador real (desktop + móvil), completar la revisión 
 Fase 7: README + `docs/DEPLOYMENT.md` finales, verificación del build de producción arrancando el servidor standalone, y commit del trabajo.
 
 ---
+
+## Ciclo 4 — Fase 7: verificación de producción y commit (2026-07-11)
+
+### Objetivo
+
+Cerrar la entrega: confirmar que el build de producción arranca y es seguro, finalizar docs y versionar el trabajo.
+
+### Comandos / pruebas (servidor de producción real, `npm run start` en :3100)
+
+- Home responde `200`.
+- **Los 6 headers de seguridad presentes**, incluida la CSP completa (verificado por `curl -I`).
+- **Sin filtración del token**: `TWENTY_API_KEY` de prueba NO aparece ni en el HTML ni en los bundles de `.next/static/`.
+- **Contingencia CRM en producción**: con token inválido, Twenty responde `401`; el route lo registra sin datos sensibles (solo id + error) y cae al fallback en disco; el usuario recibe `{ok:true}`. Honeypot → `200` silencioso con id falso, sin persistir. Leads de prueba limpiados.
+- README y `docs/DEPLOYMENT.md` revisados y completos (standalone + systemd + nginx con `x-forwarded-for`; caveat de Vercel por FS efímero).
+
+### Resultado
+
+- Commit `50161ba` en `feat/redlocal-site`: 110 archivos, +15 455 líneas. Sin secretos, sin `data/`, sin `settings.local.json`. Sitio legacy intacto en `legacy/`.
+- Estado de aceptación: promesa clara en <5s, CTA dominante, formulario sin exigir tecnicismos, no parece agencia de IA genérica, NOISE y Beacon en su rol, casos etiquetados con honestidad, blog y open source operativos, formulario funcional, integración CRM segura + adaptador verificable con instrucciones, móvil excelente, sin errores de consola propios, lint/typecheck/test/build en verde, SEO y analítica presentes, docs completas, sin contenido inventado ni relleno, desplegable.
+
+### Deuda pendiente (no bloqueante para desplegar)
+
+- Lighthouse formal a11y/perf (revisión manual + semántica hechas).
+- Campos personalizados de Twenty (dependen de credenciales reales).
+- `npm audit`: 2 moderadas transitivas de tooling (no afectan runtime de producción).
+- CSP a nonce estricto (hoy `unsafe-inline` acotado y documentado en SECURITY).
+- Push a `origin` y switch de nginx desde legacy: acciones del operador (requieren credenciales/decisión humana).
+
+### Siguiente acción de mayor valor
+
+Configurar `TWENTY_API_KEY` en el servidor y ejecutar el switch de nginx cuando el equipo valide el preview. El repositorio queda listo para desplegar.
+
+---
