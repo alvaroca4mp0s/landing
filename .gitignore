@@ -1,37 +1,57 @@
-# OS
+# ── OS ──
 .DS_Store
+.DS_Store?
+._*
+Thumbs.db
 
-# Dependencies
+# ── Editores / IDE ──
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# ── Dependencias ──
 node_modules/
 
-# Next.js
+# ── Next.js / build ──
 /.next/
 /out/
+/build/
 next-env.d.ts
 *.tsbuildinfo
 
-# Env & secrets
-.env
-.env*.local
+# ── Tests / cobertura ──
+/coverage/
+.vitest/
 
-# Leads persistidos (fallback del CRM) — nunca versionar
+# ── Entorno y secretos ──
+# Ignora TODOS los .env excepto la plantilla pública.
+.env
+.env.*
+!.env.example
+
+# ── Leads persistidos (fallback del CRM) — nunca versionar ──
 /data/
 
-# Vercel
+# ── Vercel ──
 .vercel
 
-# Claude Code — configuración local de máquina (no compartir)
+# ── Claude Code / notas locales de sesión ──
 .claude/settings.local.json
+resume_claude.txt
+*.resume.txt
 
-# Remotion workspace (keep source, ignore generated/deps)
-remotion/node_modules/
-remotion/.cache/
-remotion/dist/
-remotion/out/
-remotion/.tmp/
+# ── Remotion (mantener fuente, ignorar generados/deps en cualquier ruta) ──
+**/remotion/node_modules/
+**/remotion/.cache/
+**/remotion/dist/
+**/remotion/out/
+**/remotion/.tmp/
 
-# Logs
+# ── Logs ──
 *.log
+npm-debug.log*
 
-# Deploy output
+# ── Salida de deploy ──
 dist/
