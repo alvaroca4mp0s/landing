@@ -1,0 +1,52 @@
+{
+  "name": "landing",
+  "version": "1.0.0",
+  "description": "Sitio de RedLocal — sistemas que detectan lo que importa y hacen que alguien actúe.",
+  "private": true,
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "eslint .",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run",
+    "reprocess-leads": "tsx scripts/reprocess-leads.ts"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/alvaroca4mp0s/landing.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "module",
+  "bugs": {
+    "url": "https://github.com/alvaroca4mp0s/landing/issues"
+  },
+  "homepage": "https://github.com/alvaroca4mp0s/landing#readme",
+  "dependencies": {
+    "gray-matter": "^4.0.3",
+    "next": "^16.2.10",
+    "react": "^19.2.7",
+    "react-dom": "^19.2.7",
+    "react-markdown": "^10.1.0",
+    "remark-gfm": "^4.0.1",
+    "server-only": "^0.0.1",
+    "zod": "^4.4.3"
+  },
+  "devDependencies": {
+    "@tailwindcss/postcss": "^4.3.2",
+    "@types/node": "^26.1.1",
+    "@types/react": "^19.2.17",
+    "@types/react-dom": "^19.2.3",
+    "eslint": "^9.39.5",
+    "eslint-config-next": "^16.2.10",
+    "tailwindcss": "^4.3.2",
+    "tsx": "^4.23.0",
+    "typescript": "^6.0.3",
+    "vitest": "^4.1.10"
+  }
+}
