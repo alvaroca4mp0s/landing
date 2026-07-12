@@ -1,15 +1,35 @@
 # OS
 .DS_Store
+.DS_Store?
+._*
+Thumbs.db
 
-# Remotion workspace (keep source, ignore generated/deps)
-remotion/node_modules/
-remotion/.cache/
-remotion/dist/
-remotion/out/
-remotion/.tmp/
+# Dependencias / artefactos de build (heredados del árbol Next; no van al sitio estático)
+node_modules/
+.next/
+out/
+next-env.d.ts
+*.tsbuildinfo
+
+# Entorno y secretos
+.env
+.env.*
+!.env.example
+
+# Leads persistidos (fallback del CRM) — nunca versionar
+/data/
+
+# Notas locales de sesión
+claude.resume.txt
+*.resume.txt
+.claude/settings.local.json
+
+# Remotion (mantener fuente, ignorar generados/deps)
+**/remotion/node_modules/
+**/remotion/.cache/
+**/remotion/dist/
+**/remotion/out/
+**/remotion/.tmp/
 
 # Logs
 *.log
-
-# Deploy output
-dist/

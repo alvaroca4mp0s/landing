@@ -1,15 +1,13 @@
 {
-  "name": "RedLocal.cl",
+  "name": "RedLocal",
   "short_name": "RedLocal",
+  "description": "Sistemas que detectan lo que importa y hacen que alguien actúe.",
   "start_url": "/",
   "display": "standalone",
-  "background_color": "#f5f6f8",
-  "theme_color": "#1E4F9C",
+  "background_color": "#fbfaf7",
+  "theme_color": "#fbfaf7",
+  "lang": "es-CL",
   "icons": [
-    {
-      "src": "/assets/iso.png",
-      "sizes": "512x512",
-      "type": "image/png"
-    }
+    { "src": "/assets/iso.png", "sizes": "256x256", "type": "image/png", "purpose": "any" }
   ]
 }

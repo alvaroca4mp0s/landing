@@ -1,370 +1,468 @@
 <!doctype html>
 <html lang="es-CL">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>RestoRdL de RedLocal | Agente WhatsApp para restaurantes en Chile</title>
-    <meta name="description" content="WhatsApp automático para restaurantes: responde consultas y registra reservas al instante con RedLocal." />
-    <meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1" />
-    <link rel="canonical" href="https://redlocal.cl/" />
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <meta property="og:type" content="website" />
-    <meta property="og:locale" content="es_CL" />
-    <meta property="og:site_name" content="RedLocal.cl" />
-    <meta property="og:title" content="RestoRdL de RedLocal | Agente WhatsApp para restaurantes en Chile" />
-    <meta property="og:description" content="WhatsApp automático para restaurantes: responde consultas y registra reservas al instante con RedLocal." />
-    <meta property="og:url" content="https://redlocal.cl/" />
-    <meta property="og:image" content="https://redlocal.cl/assets/hero-redlocal.png" />
-    <meta property="og:image:width" content="1200" />
-    <meta property="og:image:height" content="630" />
-    <meta property="og:image:alt" content="RestoRdL de RedLocal - Agente WhatsApp para restaurantes en Chile" />
+  <title>RedLocal — Cuando ocurra algo importante, lo sabrás a tiempo.</title>
+  <meta name="description" content="RedLocal diseña sistemas que detectan eventos, filtran el ruido y avisan a la persona correcta por WhatsApp, Telegram, SMS o el canal que tu operación necesite." />
+  <link rel="canonical" href="https://redlocal.cl/" />
+  <meta name="theme-color" content="#fbfaf7" />
+  <meta name="robots" content="index,follow,max-image-preview:large" />
 
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="RestoRdL de RedLocal | Agente WhatsApp para restaurantes en Chile" />
-    <meta name="twitter:description" content="WhatsApp automático para restaurantes: responde consultas y registra reservas al instante con RedLocal." />
-    <meta name="twitter:image" content="https://redlocal.cl/assets/hero-redlocal.png" />
+  <meta property="og:type" content="website" />
+  <meta property="og:locale" content="es_CL" />
+  <meta property="og:site_name" content="RedLocal" />
+  <meta property="og:url" content="https://redlocal.cl/" />
+  <meta property="og:title" content="RedLocal — Cuando ocurra algo importante, lo sabrás a tiempo." />
+  <meta property="og:description" content="Sistemas que detectan lo que importa y hacen que alguien actúe. Detectamos eventos, filtramos el ruido y avisamos a la persona correcta por el canal adecuado." />
+  <meta property="og:image" content="https://redlocal.cl/assets/og.jpg" />
+  <meta property="og:image:type" content="image/jpeg" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:image:alt" content="RedLocal — Cuando ocurra algo importante, lo sabrás a tiempo." />
 
-    <link rel="icon" type="image/png" href="./assets/iso.png" />
-    <link rel="apple-touch-icon" href="./assets/iso.png" />
-    <link rel="manifest" href="./manifest.webmanifest" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="RedLocal — Cuando ocurra algo importante, lo sabrás a tiempo." />
+  <meta name="twitter:description" content="Detectamos lo que importa y avisamos a quien puede actuar, por WhatsApp, Telegram, SMS o el canal que tu operación necesite." />
+  <meta name="twitter:image" content="https://redlocal.cl/assets/og.jpg" />
 
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@graph": [
-        {
-          "@type": "Organization",
-          "@id": "https://redlocal.cl/#organization",
-          "name": "RedLocal.cl",
-          "url": "https://redlocal.cl/",
-          "logo": "https://redlocal.cl/assets/iso.png",
-          "email": "hola@redlocal.cl"
-        },
-        {
-          "@type": "WebSite",
-          "@id": "https://redlocal.cl/#website",
-          "url": "https://redlocal.cl/",
-          "name": "RedLocal.cl",
-          "inLanguage": "es-CL",
-          "publisher": { "@id": "https://redlocal.cl/#organization" }
-        },
-        {
-          "@type": "ProfessionalService",
-          "@id": "https://redlocal.cl/#service",
-          "name": "RestoRdL de RedLocal",
-          "url": "https://redlocal.cl/",
-          "description": "WhatsApp automático para restaurantes: responde consultas, ordena reservas y confirma asistencia.",
-          "areaServed": "Chile",
-          "telephone": "+56945818860",
-          "priceRange": "$$",
-          "sameAs": ["https://wa.me/56945818860"],
-          "offers": [
-            {"@type": "Offer", "name": "Plan Inicio RestoRdL", "priceCurrency": "CLP", "price": "49000"},
-            {"@type": "Offer", "name": "Plan Negocio RestoRdL", "priceCurrency": "CLP", "price": "79000"}
-          ]
-        },
-        {
-          "@type": "FAQPage",
-          "@id": "https://redlocal.cl/#faq",
-          "mainEntity": [
-            {"@type": "Question", "name": "¿Cuánto se demoran en implementarlo?", "acceptedAnswer": {"@type": "Answer", "text": "RestoRdL suele quedar operativo en pocos días hábiles, según disponibilidad del número y validaciones de WhatsApp."}},
-            {"@type": "Question", "name": "¿Sirve si mi restaurante no trabaja solo con reservas?", "acceptedAnswer": {"@type": "Answer", "text": "Sí. También responde horario, ubicación, carta y consultas frecuentes. La invitación a reservar es opcional."}},
-            {"@type": "Question", "name": "¿Necesito cambiar mi número de WhatsApp?", "acceptedAnswer": {"@type": "Answer", "text": "No necesariamente. Evaluamos tu caso y, si cumple condiciones técnicas, trabajamos sobre tu número comercial actual."}},
-            {"@type": "Question", "name": "¿Qué diferencia hay entre Inicio, Negocio y Premium?", "acceptedAnswer": {"@type": "Answer", "text": "Inicio cubre respuestas inmediatas e información esencial. Negocio suma reservas, recordatorios y seguimiento simple. Premium es para más de un local o alto volumen, con soporte prioritario y onboarding 1:1."}}
-          ]
-        }
-      ]
-    }
-    </script>
+  <link rel="icon" type="image/png" href="./assets/iso.png" />
+  <link rel="apple-touch-icon" href="./assets/iso.png" />
+  <link rel="manifest" href="./manifest.webmanifest" />
 
-    <link rel="stylesheet" href="./styles.css" />
-    <script defer data-domain="redlocal.cl" src="https://plausible.io/js/script.file-downloads.outbound-links.js"></script>
-    <script>
-      document.documentElement.classList.add('js');
-    </script>
-  </head>
-  <body>
-    <header class="site-header">
-      <div class="container nav">
-        <a class="brand" href="#inicio" aria-label="RedLocal.cl">
-          <img src="./assets/iso.webp" alt="Isotipo RedLocal.cl" class="brand-logo brand-logo--isotipo" width="44" height="44" decoding="async" />
-          <span class="brand-wordmark"><span class="brand-red">Red</span><span class="brand-blue">Local.cl</span></span>
-        </a>
-        <a class="btn btn--ghost" href="#como-funciona" data-track="cta_click" data-track-location="header" data-track-label="Ver cómo funciona">Ver cómo funciona</a>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="./styles.css" />
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Organization",
+        "@id": "https://redlocal.cl/#organization",
+        "name": "RedLocal",
+        "legalName": "RedLocal SpA",
+        "url": "https://redlocal.cl/",
+        "email": "hola@redlocal.cl",
+        "logo": "https://redlocal.cl/assets/iso.png",
+        "description": "RedLocal diseña sistemas que detectan eventos, filtran el ruido y avisan a la persona correcta por WhatsApp, Telegram, SMS o el canal que tu operación necesite.",
+        "areaServed": "CL",
+        "knowsAbout": ["Sistemas de alertas", "Detección de eventos", "Automatización orientada a eventos", "Integración industrial (MQTT, OPC UA, SCADA)", "Monitoreo de precios y oportunidades"],
+        "contactPoint": [{ "@type": "ContactPoint", "contactType": "sales", "email": "hola@redlocal.cl", "availableLanguage": ["es"] }]
+      },
+      {
+        "@type": "WebSite",
+        "@id": "https://redlocal.cl/#website",
+        "url": "https://redlocal.cl/",
+        "name": "RedLocal",
+        "inLanguage": "es-CL",
+        "publisher": { "@id": "https://redlocal.cl/#organization" }
+      }
+    ]
+  }
+  </script>
+
+  <script defer data-domain="redlocal.cl" src="https://plausible.io/js/script.tagged-events.js"></script>
+</head>
+<body>
+  <a class="skip-link" href="#contenido">Saltar al contenido</a>
+
+  <!-- Header -->
+  <header class="site-header">
+    <div class="container nav">
+      <a class="brand" href="#inicio" aria-label="RedLocal — inicio">
+        <span class="brand-dot" aria-hidden="true"></span>
+        <span class="brand-word"><span class="brand-red">Red</span><span class="brand-blue">Local</span></span>
+      </a>
+
+      <nav class="nav-links" aria-label="Secciones">
+        <a href="#reconocimiento">Problema</a>
+        <a href="#proceso">Cómo funciona</a>
+        <a href="#categorias">Soluciones</a>
+        <a href="#escenarios">Escenarios</a>
+        <a href="#noise">NOISE</a>
+      </nav>
+
+      <div class="nav-actions">
+        <a class="btn btn--primary btn--sm" href="#contacto" data-track="cta_header">Cuéntanos qué debería avisarte</a>
+        <button class="nav-toggle" aria-label="Abrir menú" aria-expanded="false" aria-controls="mobile-menu">
+          <span></span><span></span><span></span>
+        </button>
       </div>
-    </header>
+    </div>
 
-    <main id="inicio">
-      <section class="hero section">
-        <div class="container hero-layout">
-          <div class="hero__content reveal">
-            <p class="eyebrow">RestoRdL (Restaurantes)</p>
-            <h1>Tus clientes escriben. RedLocal responde al instante.</h1>
-            <p class="lead">WhatsApp automático para restaurantes que responde consultas y organiza reservas.</p>
-            <div class="cta-group">
-              <a class="btn btn--primary" href="https://wa.me/56945818860?text=Hola%20RedLocal,%20quiero%20probar%20c%C3%B3mo%20responder%C3%ADa%20mi%20restaurante" target="_blank" rel="noopener noreferrer" data-track="whatsapp_click" data-track-location="hero" data-track-label="Probar cómo respondería tu restaurante">Probar cómo respondería tu restaurante</a>
-              <a class="btn btn--secondary" href="#como-funciona" data-track="cta_click" data-track-location="hero" data-track-label="Ver cómo funciona">Ver cómo funciona</a>
-            </div>
-          </div>
+    <div class="mobile-menu" id="mobile-menu" hidden>
+      <a href="#reconocimiento">Problema</a>
+      <a href="#proceso">Cómo funciona</a>
+      <a href="#categorias">Soluciones</a>
+      <a href="#escenarios">Escenarios</a>
+      <a href="#noise">NOISE</a>
+      <a class="btn btn--primary" href="#contacto">Cuéntanos qué debería avisarte</a>
+    </div>
+  </header>
 
-          <div class="chat-mockup reveal">
-            <div class="chat-header">Panel RestoRdL</div>
-            <div class="chat-body" id="chat-body">
-              <div class="msg user">Hola, ¿atienden hoy?</div>
-              <div class="msg bot">Sí, te respondo altiro. ¿Qué servicio necesitas?</div>
-              <div class="msg user">Instalación eléctrica en local.</div>
-              <div class="msg bot">Perfecto. ¿En qué comuna estás?</div>
-            </div>
-            <div class="metrics-row">
-              <div><span class="counter" data-target="18">0</span><small>seg resp.</small></div>
-              <div><span class="counter" data-target="37">0</span><small>consultas/mes</small></div>
-              <div><span class="counter" data-target="12">0</span><small>derivaciones</small></div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section class="section" id="problema">
-        <div class="container">
-          <h2 class="reveal">Responder tarde cuesta clientes</h2>
-          <div class="grid grid--2">
-            <article class="card reveal"><h3>Respondes tarde</h3><p>El cliente reserva en otro lugar.</p></article>
-            <article class="card reveal"><h3>Se pierden conversaciones</h3><p>Reservas y consultas quedan en visto.</p></article>
-            <article class="card reveal"><h3>Desorden operativo</h3><p>No queda registro claro de reservas.</p></article>
-            <article class="card reveal">
-              <h3>Mensajes repetidos todo el día</h3>
-              <p style="margin: 0; font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, Liberation Mono, Courier New, monospace;">"hola se puede reservar"</p>
-              <p style="margin: 6px 0 0; font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, Liberation Mono, Courier New, monospace;">"hola hasta qué hora atienden"</p>
-              <p style="margin: 6px 0 0; font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, Liberation Mono, Courier New, monospace;">"hola está abierto"</p>
-            </article>
+  <main id="contenido">
+    <!-- Hero -->
+    <section class="hero" id="inicio">
+      <div class="container hero-grid">
+        <div class="hero-copy reveal">
+          <p class="kicker">Lo importante no debería depender de que alguien esté mirando</p>
+          <h1>Cuando ocurra algo importante, lo sabrás a tiempo.</h1>
+          <p class="lead">
+            Diseñamos sistemas que observan tus fuentes de información —máquinas, sensores,
+            sitios web, correos, sistemas internos—, detectan los eventos que importan,
+            filtran el ruido y avisan a la persona correcta por WhatsApp, Telegram, SMS,
+            correo o el canal que tu operación necesite.
+          </p>
+          <div class="cta-row">
+            <a class="btn btn--primary btn--lg" href="#contacto" data-track="cta_hero">Cuéntanos qué debería avisarte</a>
+            <a class="btn btn--ghost btn--lg" href="#categorias">Ver qué podemos detectar</a>
           </div>
         </div>
-      </section>
 
-      <section class="section section--alt" id="solucion">
-        <div class="container">
-          <h2 class="reveal">Lo que hace RestoRdL en tu restaurante</h2>
-          <ul class="list reveal">
-            <li>Responde consultas frecuentes: horario, ubicación, carta y opciones alimentarias.</li>
-            <li>Toma reservas por WhatsApp y las deja registradas.</li>
-            <li>Envía recordatorios para confirmar y reducir no shows.</li>
+        <figure class="hero-diagram reveal" aria-label="Diagrama del flujo de RedLocal">
+          <!-- SVG base; app.js lo anima (rotación de escenarios, señal, ruido) -->
+          <svg id="signal-flow" viewBox="0 0 720 360" role="img"
+               aria-label="Los eventos llegan desde fuentes como sensores, servidores, precios, clientes, órdenes y documentos. Pasan por un filtro que descarta el ruido. El evento importante se convierte en una señal y se envía por el canal correcto —WhatsApp, Telegram, SMS o CRM— a la persona que debe actuar.">
+            <defs>
+              <linearGradient id="fade" x1="0" x2="1">
+                <stop offset="0" stop-color="var(--line-strong)" />
+                <stop offset="1" stop-color="var(--line)" />
+              </linearGradient>
+            </defs>
+            <g id="sf-routes" fill="none" stroke="url(#fade)" stroke-width="1"></g>
+            <path id="sf-gate-ch" fill="none" stroke="var(--line-strong)" stroke-width="1"
+                  d="M350,180 C 470,180 505,118 540,118" />
+            <line id="sf-vroute" x1="540" y1="132" x2="540" y2="236" stroke="var(--line-strong)" stroke-width="1.5" />
+
+            <g>
+              <rect x="340" y="28" width="20" height="304" rx="4" fill="var(--paper-2)" stroke="var(--line-strong)" />
+              <text x="350" y="20" text-anchor="middle" class="sf-meta" font-size="11">FILTRO</text>
+              <text x="350" y="348" text-anchor="middle" fill="var(--ink-faint)" font-size="11">descarta el ruido</text>
+            </g>
+
+            <g id="sf-sources"></g>
+            <g id="sf-noise"></g>
+            <g id="sf-signal"></g>
+
+            <g>
+              <circle id="sf-ch-dot" cx="540" cy="118" r="7" fill="var(--signal)" stroke="var(--signal)" stroke-width="1.5" />
+              <text x="556" y="114" font-size="12" class="sf-meta">CANAL</text>
+              <text id="sf-ch-label" x="556" y="131" font-size="15" class="sf-display" font-weight="600">Telegram</text>
+            </g>
+            <g id="sf-action">
+              <circle cx="540" cy="250" r="5" fill="var(--ok)" />
+              <text x="556" y="247" font-size="12" class="sf-meta">ACCIÓN</text>
+              <text id="sf-act-label" x="556" y="264" font-size="13" fill="var(--ink)">Aviso al operador</text>
+            </g>
+          </svg>
+          <figcaption class="sr-only">evento → evaluación → señal → canal → acción</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <!-- Identificación -->
+    <section class="section section--alt" id="reconocimiento">
+      <div class="container">
+        <p class="kicker">Reconocimiento</p>
+        <h2 class="section-title">¿Te serviría saberlo antes?</h2>
+        <p class="section-lead">Piensa en tu operación. Casi siempre hay un momento que, de haberlo sabido a tiempo, habría cambiado la decisión.</p>
+        <ul class="situations" id="situations">
+          <li>Saberlo cuando un equipo deja de responder.</li>
+          <li>Saberlo cuando una temperatura supera un límite.</li>
+          <li>Saberlo cuando un precio cambia.</li>
+          <li>Saberlo cuando aparece una licitación.</li>
+          <li>Saberlo cuando vuelve el stock de un producto.</li>
+          <li>Saberlo cuando una orden queda detenida.</li>
+          <li>Saberlo cuando vence un contrato.</li>
+          <li>Saberlo cuando un cliente espera demasiado.</li>
+          <li>Saberlo cuando un proceso depende de que alguien mire una pantalla.</li>
+          <li>Saberlo cuando nadie está mirando.</li>
+        </ul>
+        <p class="closing">Si puedes describir el evento, podemos estudiar cómo detectarlo.</p>
+      </div>
+    </section>
+
+    <!-- Fricción -->
+    <section class="section" id="friccion">
+      <div class="container">
+        <p class="kicker">Por qué hoy se pierde</p>
+        <h2 class="section-title">El problema rara vez es tu equipo. Es estructural.</h2>
+        <p class="section-lead">La información importante ya existe. El punto es que llega tarde, llega incompleta o llega a quien no puede hacer nada con ella.</p>
+        <div class="grid grid-3" id="friction">
+          <article class="card"><h3>Demasiados sistemas</h3><p>La información existe, pero vive repartida en pantallas que nadie revisa a la vez.</p></article>
+          <article class="card"><h3>Demasiadas notificaciones</h3><p>Cuando todo avisa, nada avisa. La alerta importante queda enterrada.</p></article>
+          <article class="card"><h3>Información sin dueño</h3><p>El dato llega, pero no a la persona que puede actuar sobre él.</p></article>
+          <article class="card"><h3>Alarmas sin contexto</h3><p>Un número rojo no dice qué pasó, qué tan grave es ni qué hacer.</p></article>
+          <article class="card"><h3>Sin escalamiento</h3><p>Si el primero no responde, no hay un segundo. El evento se apaga solo.</p></article>
+          <article class="card"><h3>Depende de una persona</h3><p>Todo funciona… mientras esa persona esté mirando. Después, silencio.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Proceso -->
+    <section class="section section--alt" id="proceso">
+      <div class="container">
+        <p class="kicker">Cómo trabajamos el evento</p>
+        <h2 class="section-title">De la fuente a la acción, sin silencios en el medio.</h2>
+        <ol class="process" id="process">
+          <li><span class="pn">01</span><span class="pv">Observamos</span><span class="pd">Conectamos tus fuentes: máquinas, sensores, sitios, correos, bases de datos, sistemas internos.</span></li>
+          <li><span class="pn">02</span><span class="pv">Detectamos</span><span class="pd">Reconocemos el evento en medio del flujo, aunque llegue en formatos distintos.</span></li>
+          <li><span class="pn">03</span><span class="pv">Evaluamos</span><span class="pd">Aplicamos contexto y prioridad: ¿esto merece interrumpir a alguien ahora?</span></li>
+          <li><span class="pn">04</span><span class="pv">Avisamos</span><span class="pd">Enviamos una señal clara a la persona correcta, por el canal que ya usa.</span></li>
+          <li><span class="pn">05</span><span class="pv">Escalamos</span><span class="pd">Si nadie responde a tiempo, subimos al siguiente responsable. No se pierde.</span></li>
+          <li><span class="pn">06</span><span class="pv">Registramos</span><span class="pd">Queda evidencia: qué pasó, cuándo, a quién se avisó y qué se hizo.</span></li>
+          <li><span class="pn">07</span><span class="pv">Actuamos</span><span class="pd">Cuando corresponde y con reglas claras, ejecutamos la acción automática.</span></li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- Categorías -->
+    <section class="section" id="categorias">
+      <div class="container">
+        <p class="kicker">Dónde suele empezar</p>
+        <h2 class="section-title">Cuatro formas de entrar. No son los límites.</h2>
+        <p class="section-lead">Son puntos de partida frecuentes. Si tu caso no encaja exactamente en uno, probablemente igual podemos abordarlo.</p>
+        <div class="grid grid-2" id="categories">
+          <article class="cat"><h3>Alertas operacionales</h3><p>Detección de fallas, desviaciones, detenciones, vencimientos o condiciones críticas antes de que escalen.</p></article>
+          <article class="cat"><h3>Vigilancia de oportunidades</h3><p>Monitoreo de precios, stock, licitaciones, publicaciones y cambios que abren una ventana comercial.</p></article>
+          <article class="cat"><h3>Atención y seguimiento</h3><p>Detección, respuesta, derivación y escalamiento de solicitudes de clientes, soporte o ventas.</p></article>
+          <article class="cat"><h3>Integración y eventos industriales</h3><p>Conexión con sensores, PLC, SCADA, Historian, MQTT, OPC UA, APIs y bases de datos.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Escenarios -->
+    <section class="section section--alt" id="escenarios">
+      <div class="container">
+        <p class="kicker">Escenarios</p>
+        <h2 class="section-title">Así se ve un evento convertido en señal.</h2>
+        <p class="section-lead">Ejemplos concretos, etiquetados con honestidad: lo que hoy es prototipo, demostración o sistema interno.</p>
+        <div class="grid grid-3 scenarios" id="scenarios">
+          <article class="scenario">
+            <span class="badge">Prototipo</span>
+            <h3>Una bomba deja de entregar presión a las 03:17</h3>
+            <ol>
+              <li>El sensor reporta presión bajo el umbral.</li>
+              <li>Se evalúa: no es una lectura aislada, la condición persiste.</li>
+              <li>Telegram al operador de turno con el contexto.</li>
+              <li>Sin respuesta en 4 minutos → WhatsApp al supervisor.</li>
+              <li>Aún sin respuesta → SMS como último escalamiento.</li>
+              <li>Todo queda registrado como incidente con su línea de tiempo.</li>
+            </ol>
+          </article>
+          <article class="scenario">
+            <span class="badge">Demostración</span>
+            <h3>Un producto baja de precio en un supermercado</h3>
+            <ol>
+              <li>Un crawler revisa la página y detecta el cambio de precio.</li>
+              <li>Valida la condición: cae bajo el umbral definido.</li>
+              <li>Evita duplicados: no repite una alerta ya enviada.</li>
+              <li>Avisa a las personas interesadas por su canal.</li>
+              <li>Guarda el histórico para comparar en el tiempo.</li>
+            </ol>
+          </article>
+          <article class="scenario">
+            <span class="badge">Sistema interno</span>
+            <h3>Un cliente escribe fuera de horario</h3>
+            <ol>
+              <li>El mensaje entra por WhatsApp fuera de horario.</li>
+              <li>Se clasifica la intención y la urgencia.</li>
+              <li>Responde de inmediato con un primer acuse útil.</li>
+              <li>Crea una oportunidad en Twenty CRM.</li>
+              <li>La asigna a la persona correcta para el seguimiento.</li>
+            </ol>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Diferenciador -->
+    <section class="section band" id="diferencia">
+      <div class="container narrow">
+        <p class="kicker">La diferencia</p>
+        <blockquote class="big-quote">
+          Los dashboards sirven cuando alguien tiene tiempo para mirar.
+          <em>RedLocal existe para cuando nadie está mirando.</em>
+        </blockquote>
+        <p class="section-lead">
+          No venimos a reemplazar tus dashboards, tu observabilidad ni tus sistemas actuales.
+          Trabajamos sobre ellos: los convertimos en algo que actúa cuando la información lo
+          exige, en lugar de esperar a que alguien la note.
+        </p>
+      </div>
+    </section>
+
+    <!-- NOISE -->
+    <section class="section" id="noise">
+      <div class="container">
+        <p class="kicker">NOISE · Nuestra disciplina</p>
+        <h2 class="section-title">Menos mensajes. Más señales.</h2>
+        <p class="section-lead">Cada alerta innecesaria consume atención. Cada alerta perdida genera riesgo. Diseñamos sistemas para interrumpir solo cuando existe una razón real para actuar.</p>
+        <ul class="chips" id="noise-dims">
+          <li>Contexto</li><li>Prioridad</li><li>Destinatario</li><li>Horario</li>
+          <li>Canal</li><li>Escalamiento</li><li>Deduplicación</li><li>Evidencia</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Capacidades -->
+    <section class="section section--alt" id="capacidades">
+      <div class="container">
+        <p class="kicker">Capacidades</p>
+        <h2 class="section-title">Competencia técnica, agrupada por función.</h2>
+        <p class="section-lead">No mostramos tecnologías que no operemos. Esto es lo que efectivamente conectamos, evaluamos y enviamos.</p>
+        <div class="grid grid-2 caps" id="capabilities">
+          <div class="capgroup"><h3>Fuentes</h3><ul><li>APIs</li><li>Bases de datos</li><li>Sitios web</li><li>MQTT</li><li>OPC UA</li><li>Correo</li><li>Formularios</li><li>Archivos</li><li>Sensores</li><li>PLC</li><li>SCADA</li><li>Historian</li></ul></div>
+          <div class="capgroup"><h3>Inteligencia y reglas</h3><ul><li>Reglas de negocio</li><li>Ventanas temporales</li><li>Correlación</li><li>Deduplicación</li><li>Clasificación</li><li>Modelos de IA cuando aportan valor</li></ul></div>
+          <div class="capgroup"><h3>Canales</h3><ul><li>WhatsApp</li><li>Telegram</li><li>SMS</li><li>Email</li><li>Webhook</li><li>CRM</li><li>Ticket</li><li>Dashboard</li></ul></div>
+          <div class="capgroup"><h3>Operación</h3><ul><li>Auditoría</li><li>Logs</li><li>Reintentos</li><li>Escalamiento</li><li>Trazabilidad</li><li>Despliegue local o cloud</li></ul></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Formulario / Cómo comenzar -->
+    <section class="section" id="contacto">
+      <div class="container form-grid">
+        <div class="form-intro reveal">
+          <p class="kicker">Cómo comenzar</p>
+          <h2 class="section-title">No necesitas saber qué tecnología usar.</h2>
+          <p class="section-lead">Solo dinos qué necesitas saber y cuándo necesitas saberlo. Con eso hacemos una primera evaluación de factibilidad.</p>
+          <ul class="mini-list">
+            <li>Describe el evento con tus palabras, sin tecnicismos.</li>
+            <li>Nos cuentas dónde ocurre y a quién debe enterarse.</li>
+            <li>Te respondemos con una primera evaluación de factibilidad.</li>
           </ul>
-        </div>
-      </section>
-
-      <section class="section section--alt" id="ejemplo-real">
-        <div class="container">
-          <h2 class="reveal">Ejemplo real (WhatsApp)</h2>
-          <div class="chat-mockup reveal">
-            <div class="chat-header">RestoRdL en acción</div>
-            <div class="chat-body">
-              <div class="msg user">Hola ¿tienen mesa para 4 hoy?</div>
-              <div class="msg bot">Hola 👋 gracias por escribir. Sí tenemos disponibilidad hoy. ¿Para qué hora te gustaría reservar?</div>
-              <div class="msg user">20:30</div>
-              <div class="msg bot">Perfecto 😊 Tu mesa para 4 personas a las 20:30 está registrada.</div>
-              <div class="msg bot">Si quieres, también te enviamos un recordatorio para confirmar tu asistencia.</div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section class="section" id="como-funciona">
-        <div class="container">
-          <h2 class="reveal">Cómo funciona</h2>
-          <div class="grid grid--3">
-            <article class="card step reveal"><p class="step__num">1</p><h3>Nos compartes tu Instagram + horarios + carta</h3><p>Con eso armamos respuestas claras para tu restaurante.</p></article>
-            <article class="card step reveal"><p class="step__num">2</p><h3>Lo dejamos funcionando en tu WhatsApp</h3><p>Sin que tengas que aprender otro software.</p></article>
-            <article class="card step reveal"><p class="step__num">3</p><h3>Ajustamos respuestas para aumentar reservas y orden</h3><p>Mejoramos usando conversaciones reales de tu local.</p></article>
-          </div>
-        </div>
-      </section>
-
-      <section class="section section--alt" id="casos">
-        <div class="container">
-          <h2 class="reveal">Para restaurantes</h2>
-          <p class="muted reveal">Consultas típicas que RestoRdL puede responder y ordenar por WhatsApp.</p>
-          <div class="grid grid--3 cases-grid">
-            <article class="card reveal">
-              <h3>Horario</h3>
-              <p>Responde al instante si están abiertos y en qué horario atienden.</p>
-            </article>
-            <article class="card reveal">
-              <h3>Reservas</h3>
-              <p>Toma reservas con nombre, cantidad de personas y hora.</p>
-            </article>
-            <article class="card reveal">
-              <h3>Carta / menú</h3>
-              <p>Responde dudas sobre platos, categorías y opciones destacadas del día.</p>
-            </article>
-            <article class="card reveal">
-              <h3>Opciones en la carta</h3>
-              <p>Indica si tienen opciones veganas, vegetarianas o sin gluten disponibles.</p>
-            </article>
-            <article class="card reveal">
-              <h3>Ubicación y cómo llegar</h3>
-              <p>Comparte dirección y referencias para llegar sin fricción.</p>
-            </article>
-            <article class="card reveal">
-              <h3>Invitación a reservar</h3>
-              <p>Cierra la conversación con un mensaje simple para invitar a reservar.</p>
-            </article>
-          </div>
-        </div>
-      </section>
-
-      <section class="section" id="beneficios">
-        <div class="container">
-          <h2 class="reveal">Beneficios para tu equipo y tus clientes</h2>
-          <div class="grid grid--2">
-            <article class="card reveal">
-              <h3>Respondes al instante</h3>
-              <p>Tu cliente recibe respuesta incluso cuando el equipo está atendiendo mesas.</p>
-            </article>
-            <article class="card reveal">
-              <h3>No pierdes reservas por demora</h3>
-              <p>Menos clientes perdidos por respuestas tardías en WhatsApp.</p>
-            </article>
-            <article class="card reveal">
-              <h3>Menos interrupciones operativas</h3>
-              <p>Cocina y sala trabajan con menos cortes por mensajes repetidos.</p>
-            </article>
-            <article class="card reveal">
-              <h3>Mejor experiencia para el cliente</h3>
-              <p>Respuestas claras, rápidas y ordenadas en el canal que ya usan.</p>
-            </article>
-          </div>
-        </div>
-      </section>
-
-      <section class="section section--alt" id="validacion">
-        <div class="container">
-          <h2 class="reveal">Validación piloto</h2>
-          <div class="card reveal">
-            <p class="muted" style="margin: 0;">
-              RestoRdL ya se está probando en restaurantes reales de la Región de Coquimbo para validar respuestas rápidas, orden de conversaciones y confirmación de reservas.
-            </p>
-          </div>
-        </div>
-      </section>
-
-      <section class="section" id="empezar">
-        <div class="container">
-          <h2 class="reveal">Cómo empezar</h2>
-          <div class="grid grid--3">
-            <article class="card step reveal"><p class="step__num">1</p><h3>Compartes información básica de tu restaurante</h3><p>Horario, carta, ubicación y preguntas frecuentes.</p></article>
-            <article class="card step reveal"><p class="step__num">2</p><h3>Configuramos el agente</h3><p>Lo dejamos listo en tu WhatsApp comercial.</p></article>
-            <article class="card step reveal"><p class="step__num">3</p><h3>Empieza a responder automáticamente</h3><p>Tu equipo sigue operando mientras WhatsApp responde.</p></article>
-          </div>
-        </div>
-      </section>
-
-      <section class="section" id="planes">
-        <div class="container">
-          <h2 class="reveal">Planes simples para empezar</h2>
-          <div class="grid grid--3">
-            <article class="card plan reveal">
-              <h3>Inicio</h3>
-              <p class="price"><strong>$49.000</strong> / mes</p>
-              <p class="muted">Responde al instante y no pierdas clientes.</p>
-              <ul class="list list--compact">
-                <li>Respuestas automáticas: horario, ubicación, formas de pago y consultas frecuentes</li>
-                <li>Envío de menú/carta (texto o PDF)</li>
-                <li>Respuestas inmediatas por WhatsApp</li>
-                <li>Configuración inicial guiada (checklist)</li>
-              </ul>
-              <div class="cta-group plan-cta">
-                <a class="btn btn--primary" href="https://wa.me/56945818860?text=Hola%20RedLocal,%20quiero%20empezar%20con%20el%20plan%20Inicio%20de%20RestoRdL" target="_blank" rel="noopener noreferrer" data-track="whatsapp_click" data-track-location="planes" data-track-label="Empezar Inicio">Empezar</a>
-              </div>
-            </article>
-            <article class="card plan plan--featured reveal">
-              <p class="eyebrow plan-badge">Recomendado</p>
-              <h3>Negocio</h3>
-              <p class="price"><strong>$79.000</strong> / mes</p>
-              <p class="muted">Responde + toma reservas y confirma: cierra más ventas.</p>
-              <ul class="list list--compact">
-                <li>Todo lo del plan Inicio</li>
-                <li>Registro de reservas (nombre, hora, personas, teléfono)</li>
-                <li>Recordatorios automáticos de reserva (reduce ausencias)</li>
-                <li>Seguimiento simple de conversaciones (nuevo / reserva / listo)</li>
-                <li>Soporte preferente</li>
-              </ul>
-              <div class="cta-group plan-cta">
-                <a class="btn btn--primary" href="https://wa.me/56945818860?text=Hola%20RedLocal,%20quiero%20empezar%20con%20el%20plan%20Negocio%20de%20RestoRdL" target="_blank" rel="noopener noreferrer" data-track="whatsapp_click" data-track-location="planes" data-track-label="Elegir Negocio">Elegir Negocio</a>
-              </div>
-            </article>
-            <article class="card plan reveal">
-              <h3>Premium</h3>
-              <p class="price"><strong>A cotizar</strong></p>
-              <p class="muted">Para más de un local o alto volumen: operación con soporte prioritario.</p>
-              <ul class="list list--compact">
-                <li>Para 2+ sucursales o alto volumen</li>
-                <li>Onboarding 1:1</li>
-                <li>Soporte prioritario</li>
-                <li>Reporte mensual</li>
-              </ul>
-              <div class="cta-group plan-cta">
-                <a class="btn btn--secondary" href="https://wa.me/56945818860?text=Hola%20RedLocal,%20quiero%20cotizar%20el%20plan%20Premium%20de%20RestoRdL" target="_blank" rel="noopener noreferrer" data-track="whatsapp_click" data-track-location="planes" data-track-label="Cotizar Premium">Cotizar</a>
-              </div>
-            </article>
-          </div>
-          <div class="cta-group" style="margin-top: 18px; justify-content: center;">
-            <a class="btn btn--primary" href="https://wa.me/56945818860?text=Hola%20RedLocal,%20quiero%20probar%20c%C3%B3mo%20responder%C3%ADa%20mi%20restaurante" target="_blank" rel="noopener noreferrer" data-track="whatsapp_click" data-track-location="planes" data-track-label="Probar cómo respondería tu restaurante">Probar cómo respondería tu restaurante</a>
-          </div>
-        </div>
-      </section>
-
-      <section class="section section--alt" id="faq">
-        <div class="container">
-          <h2 class="reveal">Preguntas frecuentes</h2>
-          <div class="faq-list reveal">
-            <details class="faq-item">
-              <summary>¿Cuánto se demoran en implementarlo?</summary>
-              <p>RestoRdL suele quedar operativo en pocos días hábiles, según disponibilidad del número y validaciones de WhatsApp.</p>
-            </details>
-            <details class="faq-item">
-              <summary>¿Sirve si mi restaurante no trabaja solo con reservas?</summary>
-              <p>Sí. También responde horario, ubicación, carta y consultas frecuentes. La invitación a reservar es opcional.</p>
-            </details>
-            <details class="faq-item">
-              <summary>¿Necesito cambiar mi número de WhatsApp?</summary>
-              <p>No necesariamente. Evaluamos tu caso y, si cumple condiciones técnicas, trabajamos sobre tu número comercial actual.</p>
-            </details>
-            <details class="faq-item">
-              <summary>¿Qué diferencia hay entre Inicio, Negocio y Premium?</summary>
-              <p>Inicio cubre respuestas inmediatas e información esencial. Negocio suma reservas, recordatorios y seguimiento simple. Premium es para más de un local o alto volumen, con soporte prioritario y onboarding 1:1.</p>
-            </details>
-          </div>
-        </div>
-      </section>
-
-      <section class="section cta-final" id="contacto">
-        <div class="container reveal">
-          <h2>Activa RestoRdL en tu restaurante</h2>
-          <p>Te mostramos cómo funcionaría con tus mensajes reales.</p>
-          <div class="cta-group">
-            <a class="btn btn--primary" href="https://wa.me/56945818860?text=Hola%20RedLocal,%20quiero%20probar%20c%C3%B3mo%20responder%C3%ADa%20mi%20restaurante" target="_blank" rel="noopener noreferrer" data-track="whatsapp_click" data-track-location="cta_final" data-track-label="Probar ahora por WhatsApp">Probar ahora por WhatsApp</a>
-          </div>
-          <p class="muted">Sin compromiso. Te respondemos directo por WhatsApp.</p>
-        </div>
-      </section>
-    </main>
-
-    <footer class="site-footer">
-      <div class="container footer-grid">
-        <div class="footer-col footer-col--brand">
-          <p class="footer-brand">
-            <img src="./assets/iso.webp" alt="Isotipo RedLocal.cl" class="footer-logo" width="52" height="52" loading="lazy" decoding="async" />
-            <span><small>Soluciones de atención comercial por WhatsApp para PYMES.</small></span>
+          <p class="contact-direct">
+            ¿Prefieres escribir directo?
+            <a id="copy-email" href="mailto:hola@redlocal.cl" data-track="email_click">hola@redlocal.cl</a> ·
+            <a href="https://wa.me/56945818860?text=Hola%2C%20quiero%20conversar%20sobre%20detectar%20un%20evento%20con%20RedLocal." target="_blank" rel="noopener" data-track="whatsapp_direct">WhatsApp +56 9 4581 8860</a>
           </p>
         </div>
-        <div class="footer-col footer-col--links">
-          <p>Contacto: <a href="mailto:hola@redlocal.cl">hola@redlocal.cl</a></p>
-          <p><a href="./politica-privacidad.html">Política de privacidad</a> · <a href="./terminos-condiciones.html">Términos y condiciones</a></p>
-        </div>
-      </div>
-    </footer>
 
-    <script src="./tracking.js"></script>
-    <script src="./script.js"></script>
-  </body>
+        <form class="lead-form reveal" id="lead-form" novalidate>
+          <div class="form-head">
+            <p class="meta" id="step-count">Paso 1 de 6</p>
+            <div class="progress" aria-hidden="true" id="progress"></div>
+          </div>
+
+          <!-- Paso 1 -->
+          <fieldset class="step" data-step="0">
+            <h3>¿Qué te gustaría detectar?</h3>
+            <label class="sr-only" for="eventDescription">Qué te gustaría detectar</label>
+            <textarea id="eventDescription" name="eventDescription" rows="4" placeholder="Por ejemplo: quiero enterarme cuando aparece una licitación de mi rubro…"></textarea>
+            <p class="hint">No necesitas tecnicismos. Descríbelo con tus palabras.</p>
+          </fieldset>
+
+          <!-- Paso 2 -->
+          <fieldset class="step" data-step="1" hidden>
+            <h3>¿Dónde ocurre hoy?</h3>
+            <div class="chip-choices" id="loc-choices" role="radiogroup" aria-label="Dónde ocurre"></div>
+            <label class="sr-only" for="locationDetail">Detalle de dónde ocurre</label>
+            <input id="locationDetail" name="locationDetail" type="text" placeholder="Opcional: cuéntanos un poco más de dónde ocurre" />
+          </fieldset>
+
+          <!-- Paso 3 -->
+          <fieldset class="step" data-step="2" hidden>
+            <h3>¿Quién necesita enterarse?</h3>
+            <label class="sr-only" for="audience">Quién necesita enterarse</label>
+            <input id="audience" name="audience" type="text" placeholder="Ej.: el operador de turno, yo, el equipo comercial…" />
+          </fieldset>
+
+          <!-- Paso 4 -->
+          <fieldset class="step" data-step="3" hidden>
+            <h3>¿Qué ocurre si nadie lo detecta?</h3>
+            <label class="sr-only" for="impact">Qué ocurre si nadie lo detecta</label>
+            <textarea id="impact" name="impact" rows="3" placeholder="Ej.: se detiene la producción, perdemos la venta, el cliente se va…"></textarea>
+            <p class="hint">Esto nos ayuda a entender qué tan importante es la señal.</p>
+          </fieldset>
+
+          <!-- Paso 5 -->
+          <fieldset class="step" data-step="4" hidden>
+            <h3>¿Cómo debería llegar la alerta?</h3>
+            <p class="field-legend">Canal deseado</p>
+            <div class="chip-choices" id="ch-choices" role="radiogroup" aria-label="Canal deseado"></div>
+            <p class="field-legend">Urgencia <span class="muted">(opcional)</span></p>
+            <div class="chip-choices" id="urg-choices" role="radiogroup" aria-label="Urgencia"></div>
+          </fieldset>
+
+          <!-- Paso 6 -->
+          <fieldset class="step" data-step="5" hidden>
+            <h3>¿Cómo te contactamos?</h3>
+            <div class="field"><label for="name">Nombre</label><input id="name" name="name" type="text" autocomplete="name" /></div>
+            <div class="field"><label for="email">Correo</label><input id="email" name="email" type="email" autocomplete="email" /></div>
+            <div class="field-row">
+              <div class="field"><label for="company">Empresa (opcional)</label><input id="company" name="company" type="text" autocomplete="organization" /></div>
+              <div class="field"><label for="phone">Teléfono (opcional)</label><input id="phone" name="phone" type="tel" autocomplete="tel" /></div>
+            </div>
+            <label class="consent">
+              <input type="checkbox" id="consent" name="consent" />
+              <span>Autorizo a RedLocal a usar estos datos para responder a mi consulta, según su <a href="./privacidad.html">política de privacidad</a>. No los usaremos para otra cosa.</span>
+            </label>
+          </fieldset>
+
+          <!-- Honeypot -->
+          <div class="hp" aria-hidden="true"><label for="website">No completar</label><input id="website" name="website" tabindex="-1" autocomplete="off" /></div>
+
+          <p class="form-error" id="form-error" role="alert" hidden></p>
+
+          <div class="form-nav">
+            <button type="button" class="btn btn--text" id="btn-back" disabled>← Atrás</button>
+            <button type="button" class="btn btn--primary" id="btn-next">Continuar</button>
+            <button type="submit" class="btn btn--primary" id="btn-submit" hidden>Enviar mi caso</button>
+          </div>
+
+          <noscript>
+            <p class="hint">Para enviar tu caso escríbenos a <a href="mailto:hola@redlocal.cl">hola@redlocal.cl</a> o por <a href="https://wa.me/56945818860">WhatsApp</a>.</p>
+          </noscript>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div>
+        <a class="brand" href="#inicio" aria-label="RedLocal — inicio">
+          <span class="brand-dot" aria-hidden="true"></span>
+          <span class="brand-word"><span class="brand-red">Red</span><span class="brand-blue">Local</span></span>
+        </a>
+        <p class="footer-tag">Sistemas que detectan lo que importa y hacen que alguien actúe. Reducimos el tiempo entre un evento y una acción correcta.</p>
+        <p class="meta">Santiago · Chile</p>
+      </div>
+      <div>
+        <p class="meta footer-h">Conversar</p>
+        <ul class="footer-links">
+          <li><a href="#contacto">Cuéntanos qué debería avisarte →</a></li>
+          <li><a href="mailto:hola@redlocal.cl" data-track="email_click">hola@redlocal.cl</a></li>
+          <li><a href="https://wa.me/56945818860?text=Hola%2C%20quiero%20conversar%20sobre%20detectar%20un%20evento%20con%20RedLocal." target="_blank" rel="noopener" data-track="whatsapp_footer">WhatsApp +56 9 4581 8860</a></li>
+          <li><a href="https://crm.redlocal.cl" target="_blank" rel="noopener" data-track="crm_link">CRM comercial (Twenty)</a></li>
+        </ul>
+      </div>
+      <div>
+        <p class="meta footer-h">Explorar</p>
+        <ul class="footer-links">
+          <li><a href="#reconocimiento">El problema</a></li>
+          <li><a href="#proceso">Cómo funciona</a></li>
+          <li><a href="#categorias">Soluciones</a></li>
+          <li><a href="#noise">NOISE</a></li>
+          <li><a href="./privacidad.html">Privacidad</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-base">
+      <div class="container footer-base-row">
+        <p>© <span id="year"></span> RedLocal SpA. Todos los derechos reservados.</p>
+        <p class="meta">evento → señal → acción</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="./app.js" defer></script>
+</body>
 </html>
