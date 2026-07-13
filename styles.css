@@ -262,7 +262,8 @@ textarea:focus, .lead-form input:focus { outline: none; border-color: var(--stru
 .field { margin-top: .9rem; }
 .field:first-child { margin-top: 0; }
 .field label { display: block; font-size: .85rem; font-weight: 500; margin-bottom: .35rem; }
-.field-row { display: grid; gap: .9rem; }
+.field-row { display: grid; gap: .9rem; margin-top: .9rem; }
+.field-row .field { margin-top: 0; }
 @media (min-width: 520px) { .field-row { grid-template-columns: 1fr 1fr; } }
 .field-legend { font-size: .85rem; font-weight: 500; margin: 1.1rem 0 .5rem; }
 .field-legend:first-of-type { margin-top: 0; }

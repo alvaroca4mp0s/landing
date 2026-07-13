@@ -5,6 +5,8 @@
   var SVGNS = "http://www.w3.org/2000/svg";
   var reduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
   var WA_NUMBER = "56945818860";
+  // Workflow público de Twenty (trigger webhook) que crea la Persona en el CRM.
+  var TWENTY_LEAD_URL = "https://crm.redlocal.cl/webhooks/workflows/bfee4ce7-82de-4cff-b17b-5d22035402ac/be6d42e5-8d29-4ef0-8da1-69f2fa5ef24a";
 
   function track(name, props) {
     if (typeof window.plausible === "function") {
@@ -345,12 +347,36 @@
       return lines.join("\n");
     }
 
+    // Registra el lead en Twenty CRM. Best-effort: nunca bloquea ni interrumpe
+    // el flujo de WhatsApp; si el CRM no responde, el lead igual va por WhatsApp.
+    function sendToTwenty(msg) {
+      try {
+        var parts = state.name.trim().split(/\s+/);
+        var firstName = parts.shift() || state.name.trim();
+        var lastName = parts.join(" ");
+        fetch(TWENTY_LEAD_URL, {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          keepalive: true,
+          body: JSON.stringify({
+            firstName: firstName,
+            lastName: lastName,
+            email: state.email,
+            phone: state.phone,
+            company: state.company,
+            message: msg
+          })
+        }).catch(function () {});
+      } catch (e) {}
+    }
+
     form.addEventListener("submit", function (e) {
       e.preventDefault();
       if (state.website) { done(); return; } // honeypot: bot → simular éxito, no hacer nada
       if (!stepValid(5)) { showError("Revisa tu nombre, correo y el consentimiento."); return; }
 
       var msg = buildMessage();
+      sendToTwenty(msg); // registrar en el CRM (además de abrir WhatsApp)
       var waUrl = "https://wa.me/" + WA_NUMBER + "?text=" + encodeURIComponent(msg);
       track("form_submitted", { channel: state.channel });
       try { localStorage.removeItem(STORAGE_KEY); } catch (e2) {}
