@@ -1,0 +1,91 @@
+.offer-hero {
+  padding: clamp(4.5rem, 10vw, 8rem) 0;
+  border-bottom: 1px solid var(--line);
+}
+
+.offer-hero-grid {
+  display: grid;
+  gap: 3rem;
+  align-items: center;
+}
+
+.offer-hero h1 {
+  max-width: 15ch;
+  font-size: clamp(2.5rem, 7vw, 5.2rem);
+}
+
+.offer-lead {
+  max-width: 62ch;
+  margin-top: 1.4rem;
+  color: var(--ink-soft);
+  font-size: clamp(1.08rem, 2vw, 1.3rem);
+}
+
+.offer-note {
+  margin-top: 1.25rem;
+  color: var(--ink-faint);
+  font-family: var(--font-mono);
+  font-size: .78rem;
+  text-transform: uppercase;
+  letter-spacing: .06em;
+}
+
+.offer-summary {
+  padding: 2rem;
+  background: var(--ink);
+  color: var(--paper);
+  border-radius: var(--radius-lg);
+}
+
+.offer-summary .meta { color: #b9b5bf; }
+.offer-summary-title { margin-top: 1rem; font-family: var(--font-display); font-size: 1.55rem; line-height: 1.25; }
+.offer-summary ol { margin: 1.5rem 0 0; padding-left: 1.3rem; color: #dedbe2; }
+.offer-summary li + li { margin-top: .8rem; }
+.offer-cards { margin-top: 2.5rem; }
+.offer-cards .card .meta { margin-bottom: .7rem; }
+.offer-cards .card p:last-child { margin-top: .7rem; color: var(--ink-soft); }
+.offer-two-col, .offer-limit { display: grid; gap: 2.5rem; align-items: start; }
+.offer-checklist, .offer-exclusions { list-style: none; margin: 0; padding: 0; display: grid; gap: .8rem; }
+.offer-checklist li, .offer-exclusions li { position: relative; padding: 1rem 1rem 1rem 2.8rem; border: 1px solid var(--line); border-radius: var(--radius); background: var(--paper); }
+.offer-checklist li::before { content: "✓"; position: absolute; left: 1rem; color: var(--ok); font-weight: 700; }
+.offer-exclusions li::before { content: "—"; position: absolute; left: 1rem; color: var(--signal); font-weight: 700; }
+
+.offer-steps {
+  display: grid;
+  gap: 1px;
+  margin: 2.5rem 0 0;
+  padding: 0;
+  list-style: none;
+  background: var(--line);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+}
+
+.offer-steps li { display: grid; grid-template-columns: auto 1fr; gap: 1rem; padding: 1.5rem; background: var(--paper); }
+.offer-steps li > span { font-family: var(--font-mono); color: var(--signal-strong); }
+.offer-steps p { margin-top: .35rem; color: var(--ink-soft); }
+.section--signal { background: var(--structure-wash); border-block: 1px solid #cedcf0; }
+.meeting-card { display: grid; gap: 2.5rem; align-items: center; }
+.meeting-card h2 { max-width: 22ch; font-size: clamp(1.8rem, 4vw, 3rem); }
+.meeting-card h2 + p { max-width: 60ch; margin-top: 1rem; color: var(--ink-soft); }
+.meeting-actions { display: grid; gap: .75rem; align-content: start; }
+.meeting-privacy { margin-top: .4rem; color: var(--ink-soft); font-size: .82rem; }
+.meeting-privacy a { color: var(--structure); text-decoration: underline; }
+
+@media (min-width: 800px) {
+  .offer-steps { grid-template-columns: repeat(4, 1fr); }
+}
+
+@media (min-width: 820px) {
+  .offer-two-col, .offer-limit { grid-template-columns: .9fr 1.1fr; gap: 5rem; }
+}
+
+@media (min-width: 900px) {
+  .offer-hero-grid { grid-template-columns: minmax(0, 1.6fr) minmax(18rem, .7fr); }
+  .meeting-card { grid-template-columns: 1.2fr .8fr; }
+}
+
+@media (max-width: 760px) {
+  .offer-nav { display: none; }
+}
