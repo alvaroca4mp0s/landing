@@ -256,16 +256,12 @@
       values.forEach(function (val) {
         var b = document.createElement("button");
         b.type = "button"; b.className = "chip"; b.textContent = val;
-        b.setAttribute("role", "radio"); b.setAttribute("aria-checked", "false");
-        b.setAttribute("aria-pressed", state[key] === val ? "true" : "false");
-        if (state[key] === val) b.setAttribute("aria-checked", "true");
+        b.setAttribute("role", "radio"); b.setAttribute("aria-checked", state[key] === val ? "true" : "false");
         b.addEventListener("click", function () {
           var already = state[key] === val;
           state[key] = already ? "" : val;
           box.querySelectorAll(".chip").forEach(function (c) {
-            var on = c.textContent === state[key];
-            c.setAttribute("aria-pressed", on ? "true" : "false");
-            c.setAttribute("aria-checked", on ? "true" : "false");
+            c.setAttribute("aria-checked", c.textContent === state[key] ? "true" : "false");
           });
           markStarted(); saveDraft(); hideError(); updateNav();
           if (key === "channel" && state.channel) track("contact_channel_selected", { channel: state.channel });
