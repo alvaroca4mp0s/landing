@@ -4,6 +4,30 @@
    El azul es estructura. Monospace = metadato técnico.
    ============================================================ */
 
+/* Fuentes auto-hospedadas (subconjunto latin, variables). Antes venían de
+   Google Fonts; self-host quita 2 orígenes externos y mejora el LCP. */
+@font-face {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400 600;
+  font-display: swap;
+  src: url("./assets/fonts/inter-latin.woff2") format("woff2");
+}
+@font-face {
+  font-family: "Space Grotesk";
+  font-style: normal;
+  font-weight: 500 700;
+  font-display: swap;
+  src: url("./assets/fonts/space-grotesk-latin.woff2") format("woff2");
+}
+@font-face {
+  font-family: "JetBrains Mono";
+  font-style: normal;
+  font-weight: 400 500;
+  font-display: swap;
+  src: url("./assets/fonts/jetbrains-mono-latin.woff2") format("woff2");
+}
+
 :root {
   --paper: #fbfaf7;
   --paper-2: #f3f1ea;
