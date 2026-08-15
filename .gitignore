@@ -24,6 +24,10 @@ claude.resume.txt
 *.resume.txt
 .claude/settings.local.json
 
+# Artefactos de Python (tests con unittest)
+__pycache__/
+*.pyc
+
 # Remotion (mantener fuente, ignorar generados/deps)
 **/remotion/node_modules/
 **/remotion/.cache/
