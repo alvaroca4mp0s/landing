@@ -37,9 +37,9 @@
   border-radius: var(--radius-lg);
 }
 
-.offer-summary .meta { color: #b9b5bf; }
+.offer-summary .meta { color: var(--on-dark-faint); }
 .offer-summary-title { margin-top: 1rem; font-family: var(--font-display); font-size: 1.55rem; line-height: 1.25; }
-.offer-summary ol { margin: 1.5rem 0 0; padding-left: 1.3rem; color: #dedbe2; }
+.offer-summary ol { margin: 1.5rem 0 0; padding-left: 1.3rem; color: var(--on-dark-soft); }
 .offer-summary li + li { margin-top: .8rem; }
 .offer-cards { margin-top: 2.5rem; }
 .offer-cards .card .meta { margin-bottom: .7rem; }
@@ -65,7 +65,7 @@
 .offer-steps li { display: grid; grid-template-columns: auto 1fr; gap: 1rem; padding: 1.5rem; background: var(--paper); }
 .offer-steps li > span { font-family: var(--font-mono); color: var(--signal-strong); }
 .offer-steps p { margin-top: .35rem; color: var(--ink-soft); }
-.section--signal { background: var(--structure-wash); border-block: 1px solid #cedcf0; }
+.section--signal { background: var(--structure-wash); border-block: 1px solid var(--structure-line); }
 .meeting-card { display: grid; gap: 2.5rem; align-items: center; }
 .meeting-card h2 { max-width: 22ch; font-size: clamp(1.8rem, 4vw, 3rem); }
 .meeting-card h2 + p { max-width: 60ch; margin-top: 1rem; color: var(--ink-soft); }
@@ -89,3 +89,6 @@
 @media (max-width: 760px) {
   .offer-nav { display: none; }
 }
+
+/* Esta página no tiene menú móvil: el CTA del header queda siempre visible. */
+.offer-nav-cta { display: inline-flex; }

@@ -48,6 +48,12 @@
 
   --ok: #1b7a4b;
 
+  /* Texto/acento sobre superficies oscuras y línea azul (antes hard-coded) */
+  --signal-soft: #ff8a93;
+  --on-dark-soft: #cfcdd4;
+  --on-dark-faint: #b9b5bf;
+  --structure-line: #cedcf0;
+
   --font-sans: "Inter", ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
   --font-display: "Space Grotesk", var(--font-sans);
   --font-mono: "JetBrains Mono", ui-monospace, "SF Mono", Menlo, monospace;
@@ -176,8 +182,8 @@ img, svg { max-width: 100%; display: block; }
 .section { padding: clamp(3.5rem, 8vw, 6rem) 0; }
 .section--alt { background: var(--paper-2); border-block: 1px solid var(--line); }
 .band { background: var(--ink); color: var(--paper); }
-.band .kicker { color: #ff8a93; }
-.band .section-lead { color: #cfcdd4; }
+.band .kicker { color: var(--signal-soft); }
+.band .section-lead { color: var(--on-dark-soft); }
 
 /* ---------- Hero ---------- */
 .hero { padding: clamp(2.5rem, 6vw, 4.5rem) 0 clamp(3rem, 7vw, 5rem); }
@@ -243,7 +249,7 @@ img, svg { max-width: 100%; display: block; }
 
 /* ---------- Diferenciador ---------- */
 .big-quote { margin: 0; font-family: var(--font-display); font-weight: 600; font-size: clamp(1.6rem, 4vw, 2.4rem); line-height: 1.2; letter-spacing: -0.02em; border: 0; padding: 0; }
-.big-quote em { color: #ff8a93; font-style: normal; display: block; }
+.big-quote em { color: var(--signal-soft); font-style: normal; display: block; }
 
 /* ---------- Chips (NOISE) ---------- */
 .chips { list-style: none; margin: 2rem 0 0; padding: 0; display: flex; flex-wrap: wrap; gap: .6rem; }
