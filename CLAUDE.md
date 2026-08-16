@@ -78,13 +78,15 @@ Both are gated on `prefers-reduced-motion` and degrade to a static state.
 
 ## Conventions specific to this repo
 
-- **No analytics / no tracking.** Plausible was removed (script, CSP allowances, the `track()`
-  helper and all `[data-track]` attributes). The site sends no analytics and sets no tracking
-  cookies — only a `localStorage` form draft. **Don't reintroduce Plausible or any other tracker**
-  without an explicit request (and if you do, update `_headers` and the privacy policy together).
-- **CSP is strict** (see `_headers`): scripts only `self`; `connect-src` allows only `self` and
-  `crm.redlocal.cl` (the Twenty lead webhook). Any new external origin (script, font, image, fetch
-  endpoint) must be added to `_headers` or it will be blocked in production.
+- **Analytics: Cloudflare Web Analytics** (cookieless), a `beacon.min.js` `<script>` on every HTML
+  page (`static.cloudflareinsights.com`, token in `data-cf-beacon`). No cookies, no profiles, no
+  consent banner needed. Plausible was fully removed earlier (script, `track()` helper, all
+  `[data-track]` attributes) — **don't reintroduce Plausible or add any cookie-based/Google tracker**
+  without an explicit request; if analytics changes, update `_headers` and the privacy policy together.
+- **CSP is strict** (see `_headers`): `script-src` allows only `self` + `static.cloudflareinsights.com`
+  (the CF beacon); `connect-src` allows only `self`, `crm.redlocal.cl` (Twenty lead webhook) and
+  `cloudflareinsights.com` (the beacon's RUM endpoint). Any new external origin (script, font, image,
+  fetch endpoint) must be added to `_headers` or it will be blocked in production.
 - Contact constants live in `app.js` (`WA_NUMBER = "56945818860"`, `hola@redlocal.cl`) and are also
   hard-coded across the HTML — grep for all occurrences when changing a number, email, or the CRM
   webhook.
