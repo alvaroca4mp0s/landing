@@ -12,8 +12,10 @@
 ## Páginas
 
 - [Inicio](https://redlocal.cl/): qué construye RedLocal, cómo funciona el flujo evento → señal → acción, categorías, escenarios y contacto.
+- [Nosotros](https://redlocal.cl/nosotros/): quiénes son. Empresa de Coquimbo fundada en 2026 que opera con ~20 agentes de IA (modelos de Anthropic y OpenAI) bajo dirección humana.
 - [Diagnóstico Express OT](https://redlocal.cl/diagnostico-ot/): oferta acotada de diagnóstico de monitoreo/alertas para entornos OT (tecnología operacional). Incluye alcance explícito y exclusiones.
 - [Política de privacidad](https://redlocal.cl/privacidad/): qué datos se recopilan, para qué y cómo se tratan.
+- [Términos y condiciones](https://redlocal.cl/terminos/): condiciones de uso del sitio y las comunicaciones.
 
 ## Contacto
 
