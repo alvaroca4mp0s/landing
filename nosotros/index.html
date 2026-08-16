@@ -50,7 +50,10 @@
 
   <style>
     .about { max-width: 52rem; }
-    .about .lead-block { max-width: 42ch; }
+    /* El título del masthead usa una medida más ancha que el 20ch global:
+       en esta columna de 52rem, 20ch lo dejaba arrinconado a la izquierda. */
+    .about .section-title { max-width: 32ch; }
+    .about .lead-block { max-width: 46ch; }
     .value-grid { display: grid; gap: 1px; margin: 2.5rem 0 0; background: var(--line); border: 1px solid var(--line); border-radius: var(--radius-lg); overflow: hidden; }
     .value-grid .cell { padding: 1.6rem; background: var(--paper); }
     .value-grid .cell .meta { color: var(--signal-strong); }
