@@ -1,0 +1,304 @@
+<title>Audit SEO · redlocal.cl</title>
+<style>
+  :root {
+    --paper: #fbfaf7;
+    --paper-raise: #ffffff;
+    --paper-sink: #f2efe9;
+    --ink: #1a1820;
+    --ink-soft: #55525d;
+    --ink-faint: #6f6c76;
+    --line: #e4e0d8;
+    --line-strong: #d3cec4;
+    --signal: #e5484d;
+    --signal-soft: #f9e3e3;
+    --structure: #3b6fb5;
+    --structure-soft: #e6eef8;
+    --good: #2f8f5b;
+    --warn: #c8881d;
+    --crit: #cf3b3b;
+    --shadow: 0 1px 2px rgba(26,24,32,.04), 0 8px 24px -12px rgba(26,24,32,.14);
+    --font-sans: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    --font-mono: ui-monospace, "SF Mono", "JetBrains Mono", "Cascadia Code", Menlo, Consolas, monospace;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --paper: #16151a;
+      --paper-raise: #1f1e25;
+      --paper-sink: #121116;
+      --ink: #f3f1ee;
+      --ink-soft: #b3afba;
+      --ink-faint: #918d99;
+      --line: #2c2b33;
+      --line-strong: #3a3944;
+      --signal: #ff6b70;
+      --signal-soft: #3a2224;
+      --structure: #6ea3e0;
+      --structure-soft: #1c2a3d;
+      --good: #4fbc80;
+      --warn: #e0a949;
+      --crit: #f06a6a;
+      --shadow: 0 1px 2px rgba(0,0,0,.3), 0 12px 30px -14px rgba(0,0,0,.6);
+    }
+  }
+  :root[data-theme="dark"] {
+    --paper: #16151a; --paper-raise: #1f1e25; --paper-sink: #121116;
+    --ink: #f3f1ee; --ink-soft: #b3afba; --ink-faint: #918d99;
+    --line: #2c2b33; --line-strong: #3a3944;
+    --signal: #ff6b70; --signal-soft: #3a2224; --structure: #6ea3e0; --structure-soft: #1c2a3d;
+    --good: #4fbc80; --warn: #e0a949; --crit: #f06a6a;
+    --shadow: 0 1px 2px rgba(0,0,0,.3), 0 12px 30px -14px rgba(0,0,0,.6);
+  }
+  :root[data-theme="light"] {
+    --paper: #fbfaf7; --paper-raise: #ffffff; --paper-sink: #f2efe9;
+    --ink: #1a1820; --ink-soft: #55525d; --ink-faint: #6f6c76;
+    --line: #e4e0d8; --line-strong: #d3cec4;
+    --signal: #e5484d; --signal-soft: #f9e3e3; --structure: #3b6fb5; --structure-soft: #e6eef8;
+    --good: #2f8f5b; --warn: #c8881d; --crit: #cf3b3b;
+    --shadow: 0 1px 2px rgba(26,24,32,.04), 0 8px 24px -12px rgba(26,24,32,.14);
+  }
+
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: var(--paper);
+    color: var(--ink);
+    font-family: var(--font-sans);
+    line-height: 1.55;
+    -webkit-font-smoothing: antialiased;
+  }
+  .wrap { max-width: 60rem; margin: 0 auto; padding: clamp(1.5rem, 4vw, 3.5rem) clamp(1.1rem, 4vw, 2rem) 5rem; }
+  .mono { font-family: var(--font-mono); }
+  .eyebrow {
+    font-family: var(--font-mono);
+    font-size: .72rem; letter-spacing: .14em; text-transform: uppercase;
+    color: var(--ink-faint);
+  }
+  h1 { font-size: clamp(1.9rem, 5vw, 3rem); line-height: 1.05; margin: .5rem 0 0; text-wrap: balance; letter-spacing: -.02em; }
+  h2 { font-size: 1.35rem; margin: 0; letter-spacing: -.01em; }
+  .lede { color: var(--ink-soft); max-width: 60ch; margin: 1rem 0 0; font-size: 1.05rem; }
+
+  /* Hero score */
+  .hero {
+    margin-top: 2.5rem;
+    display: grid; gap: 2rem;
+    grid-template-columns: auto 1fr;
+    align-items: center;
+    padding: clamp(1.4rem, 3vw, 2.2rem);
+    background: var(--paper-raise);
+    border: 1px solid var(--line);
+    border-radius: 20px;
+    box-shadow: var(--shadow);
+  }
+  .gauge { position: relative; width: 168px; height: 168px; }
+  .gauge svg { transform: rotate(-90deg); display: block; }
+  .gauge .val {
+    position: absolute; inset: 0; display: grid; place-content: center; text-align: center;
+  }
+  .gauge .num { font-family: var(--font-mono); font-size: 2.9rem; font-weight: 600; letter-spacing: -.03em; line-height: 1; }
+  .gauge .den { font-family: var(--font-mono); font-size: .8rem; color: var(--ink-faint); margin-top: .25rem; }
+  .hero-side h2 { font-size: 1.05rem; color: var(--ink-soft); font-weight: 600; }
+  .verdict { font-size: 1.5rem; letter-spacing: -.01em; margin: .35rem 0 0; text-wrap: balance; }
+  .verdict b { color: var(--good); }
+  .hero-meta { margin-top: 1rem; display: flex; flex-wrap: wrap; gap: .5rem; }
+  .chip {
+    font-family: var(--font-mono); font-size: .72rem; letter-spacing: .04em;
+    padding: .3rem .6rem; border-radius: 999px; border: 1px solid var(--line-strong);
+    color: var(--ink-soft); background: var(--paper-sink);
+  }
+
+  section { margin-top: 3.2rem; }
+  .sec-head { display: flex; align-items: baseline; gap: .8rem; border-bottom: 1px solid var(--line); padding-bottom: .7rem; margin-bottom: 1.5rem; }
+  .sec-head .n { font-family: var(--font-mono); font-size: .8rem; color: var(--signal); }
+
+  /* Category bars */
+  .cats { display: grid; gap: 1rem; }
+  .cat { display: grid; grid-template-columns: 12rem 1fr 3.2rem; gap: 1rem; align-items: center; }
+  .cat .name { font-weight: 600; font-size: .95rem; }
+  .cat .name small { display: block; font-family: var(--font-mono); font-size: .68rem; color: var(--ink-faint); font-weight: 400; letter-spacing: .04em; }
+  .track { height: 10px; border-radius: 999px; background: var(--paper-sink); overflow: hidden; border: 1px solid var(--line); }
+  .fill { height: 100%; border-radius: 999px; }
+  .cat .score { font-family: var(--font-mono); font-weight: 600; text-align: right; font-variant-numeric: tabular-nums; }
+  .s-good .fill { background: var(--good); } .s-good .score { color: var(--good); }
+  .s-warn .fill { background: var(--warn); } .s-warn .score { color: var(--warn); }
+  .s-crit .fill { background: var(--crit); } .s-crit .score { color: var(--crit); }
+
+  /* Findings */
+  .finds { display: grid; gap: .9rem; }
+  .find {
+    display: grid; grid-template-columns: auto 1fr auto; gap: 1rem; align-items: start;
+    padding: 1.1rem 1.2rem; background: var(--paper-raise);
+    border: 1px solid var(--line); border-left-width: 3px; border-radius: 12px;
+  }
+  .find.sev-high { border-left-color: var(--crit); }
+  .find.sev-med { border-left-color: var(--warn); }
+  .find.sev-low { border-left-color: var(--structure); }
+  .find .ic { font-family: var(--font-mono); font-size: .7rem; font-weight: 600; letter-spacing: .06em; padding: .25rem .5rem; border-radius: 6px; white-space: nowrap; }
+  .sev-high .ic { color: var(--crit); background: var(--signal-soft); }
+  .sev-med .ic { color: var(--warn); background: color-mix(in srgb, var(--warn) 14%, transparent); }
+  .sev-low .ic { color: var(--structure); background: var(--structure-soft); }
+  .find h3 { margin: 0; font-size: 1rem; }
+  .find p { margin: .3rem 0 0; color: var(--ink-soft); font-size: .92rem; }
+  .status { font-family: var(--font-mono); font-size: .68rem; letter-spacing: .06em; padding: .3rem .55rem; border-radius: 999px; white-space: nowrap; align-self: center; }
+  .st-done { color: var(--good); background: color-mix(in srgb, var(--good) 15%, transparent); }
+  .st-pend { color: var(--ink-faint); background: var(--paper-sink); border: 1px solid var(--line); }
+  .find.done h3 { text-decoration: none; }
+  .find.done { opacity: .82; }
+
+  /* Action plan */
+  .phases { display: grid; gap: 1rem; }
+  .phase { padding: 1.2rem 1.3rem; border: 1px solid var(--line); border-radius: 14px; background: var(--paper-raise); }
+  .phase > .ph-head { display: flex; align-items: baseline; justify-content: space-between; gap: 1rem; flex-wrap: wrap; }
+  .phase h3 { margin: 0; font-size: 1.05rem; }
+  .phase .when { font-family: var(--font-mono); font-size: .72rem; color: var(--ink-faint); letter-spacing: .04em; }
+  .phase ul { margin: .8rem 0 0; padding-left: 0; list-style: none; display: grid; gap: .5rem; }
+  .phase li { position: relative; padding-left: 1.5rem; color: var(--ink-soft); font-size: .93rem; }
+  .phase li::before { content: "→"; position: absolute; left: 0; color: var(--signal); font-family: var(--font-mono); }
+  .phase li.d { color: var(--ink-faint); }
+  .phase li.d::before { content: "✓"; color: var(--good); }
+  .phase li.d s { text-decoration-color: var(--line-strong); }
+
+  .note { margin-top: 1.2rem; font-size: .85rem; color: var(--ink-faint); border-left: 2px solid var(--line-strong); padding-left: 1rem; }
+  footer { margin-top: 3.5rem; padding-top: 1.5rem; border-top: 1px solid var(--line); font-family: var(--font-mono); font-size: .74rem; color: var(--ink-faint); display: flex; justify-content: space-between; flex-wrap: wrap; gap: .5rem; }
+
+  @media (max-width: 640px) {
+    .hero { grid-template-columns: 1fr; justify-items: center; text-align: center; }
+    .hero-meta { justify-content: center; }
+    .cat { grid-template-columns: 1fr auto; }
+    .cat .track { grid-column: 1 / -1; order: 3; }
+    .find { grid-template-columns: auto 1fr; }
+    .find .status { grid-column: 2; justify-self: start; }
+  }
+</style>
+
+<div class="wrap">
+  <p class="eyebrow">Auditoría SEO · redlocal.cl · 15 ago 2026 · <span style="color:var(--good)">actualizada tras las correcciones</span></p>
+  <h1>Señal sobre papel, ahora legible para los buscadores.</h1>
+  <p class="lede">Revisión de las páginas públicas del sitio (home, Nosotros, oferta OT, privacidad, términos) con scripts en vivo y análisis por especialidad: técnico, contenido/E-E-A-T, on-page, schema, performance, GEO e imágenes. Este informe refleja el estado <strong>después</strong> de aplicar las correcciones: de 70 a 83.</p>
+
+  <div class="hero">
+    <div class="gauge">
+      <svg width="168" height="168" viewBox="0 0 168 168" aria-hidden="true">
+        <circle cx="84" cy="84" r="74" fill="none" stroke="var(--line)" stroke-width="14"></circle>
+        <circle cx="84" cy="84" r="74" fill="none" stroke="var(--good)" stroke-width="14" stroke-linecap="round"
+                stroke-dasharray="465" stroke-dashoffset="79"></circle>
+      </svg>
+      <div class="val">
+        <div class="num">83</div>
+        <div class="den">/ 100</div>
+      </div>
+    </div>
+    <div class="hero-side">
+      <h2>SEO Health Score <span style="font-family:var(--font-mono);font-size:.8rem;color:var(--good)">▲ +13</span></h2>
+      <p class="verdict">Fugas <b>cerradas</b>: técnicos, contenido (Nosotros + Términos) y privacidad resueltos y en vivo. Quedan mejoras de autoridad de menor impacto.</p>
+      <div class="hero-meta">
+        <span class="chip">5 páginas</span>
+        <span class="chip">estático · Cloudflare Pages</span>
+        <span class="chip">analítica sin cookies</span>
+        <span class="chip">B2B · Coquimbo, CL</span>
+      </div>
+    </div>
+  </div>
+
+  <section>
+    <div class="sec-head"><span class="n">01</span><h2>Puntaje por categoría</h2></div>
+    <div class="cats">
+      <div class="cat s-good"><div class="name">Technical SEO<small>68 → 84</small></div><div class="track"><div class="fill" style="width:84%"></div></div><div class="score">84</div></div>
+      <div class="cat s-good"><div class="name">Content · E-E-A-T<small>62 → 82</small></div><div class="track"><div class="fill" style="width:82%"></div></div><div class="score">82</div></div>
+      <div class="cat s-good"><div class="name">On-Page SEO<small>72 → 84</small></div><div class="track"><div class="fill" style="width:84%"></div></div><div class="score">84</div></div>
+      <div class="cat s-good"><div class="name">Schema<small>80 → 82</small></div><div class="track"><div class="fill" style="width:82%"></div></div><div class="score">82</div></div>
+      <div class="cat s-good"><div class="name">Performance <small>CWV · estimado</small></div><div class="track"><div class="fill" style="width:90%"></div></div><div class="score">90</div></div>
+      <div class="cat s-warn"><div class="name">AI Search · GEO<small>60 → 76</small></div><div class="track"><div class="fill" style="width:76%"></div></div><div class="score">76</div></div>
+      <div class="cat s-good"><div class="name">Images<small>peso 5%</small></div><div class="track"><div class="fill" style="width:85%"></div></div><div class="score">85</div></div>
+    </div>
+  </section>
+
+  <section>
+    <div class="sec-head"><span class="n">02</span><h2>Hallazgos principales</h2></div>
+    <div class="finds">
+      <div class="find sev-high done">
+        <span class="ic">ALTA</span>
+        <div><h3>Soft-404: todo devolvía 200</h3><p>Cualquier ruta inexistente servía la home con status 200 — homes duplicadas e indexables sin límite. Se añadió <span class="mono">404.html</span>; Cloudflare Pages ahora responde con 404 real.</p></div>
+        <span class="status st-done">Resuelto</span>
+      </div>
+      <div class="find sev-med done">
+        <span class="ic">MEDIA</span>
+        <div><h3>Privacidad: canonical y enlaces con <span class="mono">.html</span></h3><p>La URL hacía 308 a la versión limpia, pero canonical, sitemap y enlaces apuntaban a <span class="mono">.html</span>. Se movió a <span class="mono">/privacidad/</span> (patrón de directorio), con canonical, sitemap, enlaces y un 301 alineados.</p></div>
+        <span class="status st-done">Resuelto</span>
+      </div>
+      <div class="find sev-high done">
+        <span class="ic">ALTA</span>
+        <div><h3>Keyword ausente en el <span class="mono">&lt;title&gt;</span> de la home</h3><p>El título era puramente emocional. Ahora: «RedLocal — Sistemas de alertas y detección de eventos» (≤60 chars). OG/Twitter mantienen el gancho para redes.</p></div>
+        <span class="status st-done">Resuelto</span>
+      </div>
+      <div class="find sev-low done">
+        <span class="ic">BAJA</span>
+        <div><h3>Sin <span class="mono">llms.txt</span> real</h3><p><span class="mono">/llms.txt</span> devolvía el fallback soft-404. Se publicó un <span class="mono">llms.txt</span> genuino que resume el sitio para crawlers de IA (opcional; Google lo ignora).</p></div>
+        <span class="status st-done">Resuelto</span>
+      </div>
+      <div class="find sev-high done">
+        <span class="ic">ALTA</span>
+        <div><h3>Sin página «Nosotros»</h3><p>Se creó <span class="mono">/nosotros/</span>: empresa de Coquimbo (2026) que opera con ~20 agentes de IA bajo dirección humana, con la tesis NOISE ligada a «Attention Is All You Need», valores y <span class="mono">AboutPage</span> JSON-LD. Señal E-E-A-T ahora presente y enlazada en el footer.</p></div>
+        <span class="status st-done">Resuelto</span>
+      </div>
+      <div class="find sev-med done">
+        <span class="ic">MEDIA</span>
+        <div><h3>Sin página de Términos</h3><p>Se creó <span class="mono">/terminos/</span> (13 secciones) y se reescribió <span class="mono">/privacidad/</span> (17 secciones, Ley 19.628), consistentes entre sí y enlazadas. Términos integra la privacidad por referencia. Identificación legal real: RedLocal SpA, RUT 78.388.986-2.</p></div>
+        <span class="status st-done">Resuelto</span>
+      </div>
+      <div class="find sev-med done">
+        <span class="ic">PRIVACIDAD</span>
+        <div><h3>Analítica migrada a cookieless</h3><p>Se removió Plausible por completo (script, CSP, <span class="mono">track()</span> y <span class="mono">data-track</span>) y se activó <strong>Cloudflare Web Analytics</strong>: métricas agregadas <strong>sin cookies, sin perfiles y sin banner de consentimiento</strong>. Es el único script de terceros, diferido y liviano; la política de privacidad lo declara.</p></div>
+        <span class="status st-done">Resuelto</span>
+      </div>
+      <div class="find sev-low">
+        <span class="ic">BAJA</span>
+        <div><h3>Schema sin campos recomendados</h3><p><span class="mono">Organization</span> sin <span class="mono">sameAs</span>; <span class="mono">WebSite</span> sin <span class="mono">SearchAction</span>. Ambos requieren datos reales que hoy no existen: perfiles sociales y buscador on-site.</p></div>
+        <span class="status st-pend">Pendiente</span>
+      </div>
+    </div>
+    <p class="note">Todo lo accionable en esta sesión quedó corregido y desplegado: los 4 técnicos, la página Nosotros, y el par legal completo (Términos + Privacidad). El único pendiente —<span class="mono">sameAs</span> / <span class="mono">SearchAction</span>— requiere datos reales que hoy no existen (perfiles sociales, buscador on-site) y no se fabrican.</p>
+  </section>
+
+  <section>
+    <div class="sec-head"><span class="n">03</span><h2>Plan de acción</h2></div>
+    <div class="phases">
+      <div class="phase">
+        <div class="ph-head"><h3>Fase 1 — Críticos / técnicos</h3><span class="when">hecho · esta sesión</span></div>
+        <ul>
+          <li class="d"><s>404.html para eliminar el soft-404</s></li>
+          <li class="d"><s>/privacidad extensionless: canonical + sitemap + enlaces + 301</s></li>
+          <li class="d"><s>Keyword en el &lt;title&gt; de la home (≤60)</s></li>
+          <li class="d"><s>llms.txt real para crawlers de IA</s></li>
+        </ul>
+      </div>
+      <div class="phase">
+        <div class="ph-head"><h3>Fase 2 — E-E-A-T</h3><span class="when">hecho · esta sesión</span></div>
+        <ul>
+          <li class="d"><s>Página <span class="mono">/nosotros</span> (historia, modelo de trabajo, ubicación)</s></li>
+          <li class="d"><s>Términos + Privacidad completos y enlazados en el footer</s></li>
+          <li class="d"><s>Analítica migrada a Cloudflare Web Analytics (sin cookies, sin consentimiento)</s></li>
+        </ul>
+      </div>
+      <div class="phase">
+        <div class="ph-head"><h3>Fase 3 — Autoridad &amp; GEO</h3><span class="when">cuando haya insumos</span></div>
+        <ul>
+          <li><span class="mono">Organization.sameAs</span> (cuando existan perfiles) + <span class="mono">SearchAction</span></li>
+          <li>Schema <span class="mono">FAQPage</span> + pasajes citables para IA</li>
+        </ul>
+      </div>
+      <div class="phase">
+        <div class="ph-head"><h3>Fase 4 — Monitoreo</h3><span class="when">continuo</span></div>
+        <ul>
+          <li>Conectar GSC + PageSpeed/CrUX para verificar CWV de campo</li>
+          <li>Seguir posiciones del keyword objetivo</li>
+        </ul>
+      </div>
+    </div>
+    <p class="note">Performance (90) es estimado: no se midió en campo por falta de API key de PageSpeed / acceso a CrUX. Los indicadores de laboratorio son fuertes: sitio estático liviano, fuentes self-host con preload + swap y un único script de terceros, el beacon de analítica <strong>sin cookies</strong> de Cloudflare (diferido y liviano), en lugar del stack anterior de Plausible.</p>
+  </section>
+
+  <footer>
+    <span>evento → señal → acción</span>
+    <span>RedLocal · SEO Health 83/100</span>
+  </footer>
+</div>

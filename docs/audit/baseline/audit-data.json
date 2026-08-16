@@ -1,0 +1,92 @@
+{
+  "summary": {
+    "health_score": 70,
+    "business_type": "B2B technical services — event detection & alerting systems (Coquimbo, Chile); light local component",
+    "pages_crawled": 3,
+    "top_findings": [
+      "Soft-404: every unmatched route returns HTTP 200 serving the homepage",
+      ".html URLs 308-redirect to clean URLs, but canonical/sitemap/internal links still use .html",
+      "Primary keyword absent from homepage <title> and <h1>",
+      "No About/Nosotros page and no Terms page (E-E-A-T gaps)",
+      "Schema missing recommended fields (sameAs, SearchAction)"
+    ],
+    "quick_wins": [
+      "Add 404.html (Cloudflare Pages serves it with a real 404 status)",
+      "Point canonical + sitemap + internal links to /privacidad (not /privacidad.html)",
+      "Add primary keyword to the homepage title",
+      "Add Organization.sameAs and WebSite.potentialAction (SearchAction)"
+    ]
+  },
+  "categories": [
+    {
+      "name": "Technical SEO",
+      "score": 68,
+      "what_works": ["HTTP->HTTPS 301", "HSTS 2y + preload", "strong CSP (default-src 'self')", "x-frame DENY, nosniff, referrer-policy", "robots.txt allows crawl + sitemap directive", "valid sitemap (3 URLs)"],
+      "findings": [
+        {"title": "Soft-404 (200 for unmatched routes)", "severity": "High", "description": "/pagina-basura-xyz and /llms.txt both return 200 serving index.html. Unlimited duplicate homepages are indexable.", "recommendation": "Add a 404.html at repo root; Cloudflare Pages serves it with a 404 status for unmatched routes."},
+        {"title": ".html -> clean-URL 308 with canonical/sitemap mismatch", "severity": "Medium", "description": "/privacidad.html 308-redirects to /privacidad, but the served page's canonical is /privacidad.html and the sitemap + footer links reference /privacidad.html, causing a redirect hop and a canonical that points at a redirecting URL.", "recommendation": "Reference /privacidad (extensionless) in the canonical tag, sitemap.xml, and all internal links; or disable Cloudflare clean-URL rewriting."}
+      ]
+    },
+    {
+      "name": "Content Quality (E-E-A-T)",
+      "score": 62,
+      "what_works": ["Specific, honest copy", "maturity badges (Prototipo/Demostracion/Sistema interno)", "real contact paths", "~1132 words on home"],
+      "findings": [
+        {"title": "No About/Nosotros page", "severity": "High", "description": "No dedicated About page to establish who RedLocal is (experience, people, credentials) — a core E-E-A-T signal.", "recommendation": "Add /nosotros with company story, team, expertise, and location."},
+        {"title": "No Terms page", "severity": "Medium", "description": "Terms of Service page was removed with legacy/ and is not linked anywhere.", "recommendation": "Restore a Terms page and link it in the footer."},
+        {"title": "Weak author/entity signals", "severity": "Low", "description": "No author, organization credentials, or sameAs profiles to reinforce authority.", "recommendation": "Add sameAs social/professional profiles and author/company credentials."}
+      ]
+    },
+    {
+      "name": "On-Page SEO",
+      "score": 72,
+      "what_works": ["Unique titles per page", "meta descriptions present", "clean heading hierarchy (1 H1, 8 H2, 23 H3)", "self-referencing canonical"],
+      "findings": [
+        {"title": "Primary keyword absent from homepage title/H1", "severity": "High", "description": "Title and H1 are emotional/brand-led ('Cuando ocurra algo importante...'). The core keyword (sistemas de alertas / deteccion de eventos) appears only in the meta and body.", "recommendation": "Homepage brand + keyword, e.g. 'RedLocal — Sistemas de alertas y deteccion de eventos'."},
+        {"title": "Title length 61 chars", "severity": "Low", "description": "Slightly over 60; may truncate in SERPs.", "recommendation": "Trim to <=60 chars when adding the keyword."}
+      ]
+    },
+    {
+      "name": "Schema / Structured Data",
+      "score": 80,
+      "what_works": ["Organization + WebSite JSON-LD on home", "Service schema on /diagnostico-ot/", "no type conflicts", "expected types present"],
+      "findings": [
+        {"title": "Missing recommended schema fields", "severity": "Low", "description": "Organization missing sameAs; WebSite missing potentialAction (SearchAction).", "recommendation": "Add sameAs (social profiles) and a SearchAction; consider BreadcrumbList on inner pages."}
+      ]
+    },
+    {
+      "name": "Performance (CWV)",
+      "score": 85,
+      "what_works": ["Lean static site (no framework)", "~18KB CSS / ~16KB JS (home only)", "self-hosted subset fonts with preload + font-display:swap", "no render-blocking third-party CSS", "webp images"],
+      "findings": [
+        {"title": "Field CWV not verified", "severity": "Info", "description": "PageSpeed/CrUX not measured (no PSI API key or GSC/CrUX access). Lab indicators are strong; self-hosting fonts should improve LCP vs the previous Google Fonts setup.", "recommendation": "Set a PageSpeed API key or connect GSC/CrUX to confirm field CWV."}
+      ]
+    },
+    {
+      "name": "AI Search Readiness (GEO)",
+      "score": 60,
+      "what_works": ["Clear, factual, structured content", "AI crawlers not blocked in robots.txt", "schema aids entity understanding"],
+      "findings": [
+        {"title": "No real llms.txt", "severity": "Low", "description": "/llms.txt returns 200 but is the soft-404 fallback (home HTML), not a real llms.txt.", "recommendation": "Add a genuine /llms.txt summarizing the site for AI crawlers (optional; ignored by Google)."},
+        {"title": "Limited citability signals", "severity": "Low", "description": "No FAQ schema or explicit Q&A blocks that AI engines cite easily.", "recommendation": "Add FAQPage schema for common questions; keep concise, quotable passages."}
+      ]
+    },
+    {
+      "name": "Images",
+      "score": 85,
+      "what_works": ["Home hero is accessible inline SVG (role=img + aria-label)", "OG image present", "webp with fallback"],
+      "findings": [
+        {"title": "No on-page raster images to optimize", "severity": "Info", "description": "Home has no <img> tags; hero is SVG. Nothing to fix.", "recommendation": "N/A"}
+      ]
+    }
+  ],
+  "action_plan": {
+    "phases": [
+      {"name": "Phase 1: Critical Fixes", "timeframe": "Week 1", "items": ["Add 404.html to stop soft-404 (200) on unmatched routes", "Fix /privacidad canonical + sitemap + internal links to extensionless URL"]},
+      {"name": "Phase 2: High-Impact Improvements", "timeframe": "Weeks 2-3", "items": ["Add primary keyword to homepage title (<=60 chars)", "Add /nosotros (About) page for E-E-A-T", "Restore Terms page + footer link"]},
+      {"name": "Phase 3: Content & Authority", "timeframe": "Month 2", "items": ["Add Organization.sameAs + WebSite SearchAction", "Add FAQPage schema", "Optional real llms.txt", "Author/credential signals"]},
+      {"name": "Phase 4: Monitoring & Iteration", "timeframe": "Ongoing", "items": ["Connect GSC + PageSpeed/CrUX to verify field CWV and indexation", "Monitor keyword positions"]}
+    ]
+  },
+  "artifacts": {"findings_dir": "findings/", "screenshots_dir": "screenshots/"}
+}
