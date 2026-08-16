@@ -78,11 +78,12 @@ Both are gated on `prefers-reduced-motion` and degrade to a static state.
 
 ## Conventions specific to this repo
 
-- **Analytics: Plausible**, loaded from `index.html` with `data-domain="redlocal.cl"`. Custom
-  events fire through `track()` / `[data-track]` attributes (`form_started`, `form_step_completed`,
-  `form_submitted`, `contact_channel_selected`). Reuse that mechanism; don't add other trackers.
-- **CSP is strict** (see `_headers`): scripts only `self` + `plausible.io`; `connect-src` allows
-  only `plausible.io` and `crm.redlocal.cl`. Any new external origin (script, font, image, fetch
+- **No analytics / no tracking.** Plausible was removed (script, CSP allowances, the `track()`
+  helper and all `[data-track]` attributes). The site sends no analytics and sets no tracking
+  cookies — only a `localStorage` form draft. **Don't reintroduce Plausible or any other tracker**
+  without an explicit request (and if you do, update `_headers` and the privacy policy together).
+- **CSP is strict** (see `_headers`): scripts only `self`; `connect-src` allows only `self` and
+  `crm.redlocal.cl` (the Twenty lead webhook). Any new external origin (script, font, image, fetch
   endpoint) must be added to `_headers` or it will be blocked in production.
 - Contact constants live in `app.js` (`WA_NUMBER = "56945818860"`, `hola@redlocal.cl`) and are also
   hard-coded across the HTML — grep for all occurrences when changing a number, email, or the CRM

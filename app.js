@@ -8,12 +8,6 @@
   // Workflow público de Twenty (trigger webhook) que crea la Persona en el CRM.
   var TWENTY_LEAD_URL = "https://crm.redlocal.cl/webhooks/workflows/bfee4ce7-82de-4cff-b17b-5d22035402ac/be6d42e5-8d29-4ef0-8da1-69f2fa5ef24a";
 
-  function track(name, props) {
-    if (typeof window.plausible === "function") {
-      try { window.plausible(name, props ? { props: props } : undefined); } catch (e) {}
-    }
-  }
-
   /* ---------- Año del footer ---------- */
   var yearEl = document.getElementById("year");
   if (yearEl) yearEl.textContent = String(new Date().getFullYear());
@@ -45,12 +39,6 @@
     }, { threshold: 0.12 });
     els.forEach(function (el) { io.observe(el); });
   })();
-
-  /* ---------- Track de enlaces con data-track ---------- */
-  document.addEventListener("click", function (e) {
-    var el = e.target.closest("[data-track]");
-    if (el) track(el.getAttribute("data-track"));
-  });
 
   /* ---------- Copiar correo ---------- */
   (function copyEmail() {
@@ -195,7 +183,6 @@
       company: "", phone: "", consent: false, website: ""
     };
     var step = 0;
-    var started = false;
 
     var steps = form.querySelectorAll(".step");
     var stepCount = document.getElementById("step-count");
@@ -230,15 +217,13 @@
       } catch (e) {}
     }
 
-    function markStarted() { if (!started) { started = true; track("form_started"); } }
-
     // Inputs de texto
     function bindInput(id, key) {
       var input = document.getElementById(id);
       if (!input) return;
       if (state[key]) input.value = state[key];
       input.addEventListener("input", function () {
-        state[key] = input.value; markStarted(); saveDraft(); hideError(); updateNav();
+        state[key] = input.value; saveDraft(); hideError(); updateNav();
       });
     }
     ["eventDescription", "locationDetail", "audience", "impact", "name", "email", "company", "phone"].forEach(function (id) {
@@ -263,8 +248,7 @@
           box.querySelectorAll(".chip").forEach(function (c) {
             c.setAttribute("aria-checked", c.textContent === state[key] ? "true" : "false");
           });
-          markStarted(); saveDraft(); hideError(); updateNav();
-          if (key === "channel" && state.channel) track("contact_channel_selected", { channel: state.channel });
+          saveDraft(); hideError(); updateNav();
         });
         box.appendChild(b);
       });
@@ -321,7 +305,6 @@
 
     btnNext.addEventListener("click", function () {
       if (!stepValid(step)) { showError("Completa este paso para continuar."); return; }
-      track("form_step_completed", { step: step + 1 });
       step = Math.min(step + 1, TOTAL - 1); hideError(); renderStep();
     });
     btnBack.addEventListener("click", function () { step = Math.max(step - 1, 0); hideError(); renderStep(); });
@@ -374,7 +357,6 @@
       var msg = buildMessage();
       sendToTwenty(msg); // registrar en el CRM (además de abrir WhatsApp)
       var waUrl = "https://wa.me/" + WA_NUMBER + "?text=" + encodeURIComponent(msg);
-      track("form_submitted", { channel: state.channel });
       try { localStorage.removeItem(STORAGE_KEY); } catch (e2) {}
       window.open(waUrl, "_blank", "noopener");
       done(msg);
