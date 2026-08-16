@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Términos y condiciones · RedLocal</title>
-  <meta name="description" content="Términos y condiciones de uso del sitio redlocal.cl y de las comunicaciones con RedLocal SpA." />
+  <meta name="description" content="Términos y condiciones de uso del sitio redlocal.cl y de las comunicaciones con RedLocal SpA: uso permitido, propiedad intelectual, responsabilidad, privacidad y ley aplicable." />
   <link rel="canonical" href="https://redlocal.cl/terminos/" />
   <meta name="theme-color" content="#fbfaf7" />
   <meta name="robots" content="index,follow" />
@@ -14,14 +14,20 @@
   <link rel="preload" href="../assets/fonts/jetbrains-mono-latin.woff2" as="font" type="font/woff2" crossorigin />
   <link rel="stylesheet" href="../styles.css" />
   <style>
-    .legal { max-width: 46rem; }
-    .legal h2 { font-size: 1.3rem; margin-top: 2.2rem; }
-    .legal p, .legal ul { margin-top: .9rem; color: var(--ink-soft); }
-    .legal ul { padding-left: 1.2rem; }
-    .legal li { margin-top: .4rem; }
-    .legal a { color: var(--structure); text-decoration: underline; }
+    .legal { max-width: 48rem; }
     .legal .updated { font-family: var(--font-mono); font-size: .78rem; color: var(--ink-faint); text-transform: uppercase; letter-spacing: .06em; }
+    .legal h2 { font-size: 1.35rem; margin-top: 2.6rem; scroll-margin-top: 5rem; }
+    .legal p, .legal ul, .legal ol { margin-top: .9rem; color: var(--ink-soft); }
+    .legal ul, .legal ol { padding-left: 1.2rem; }
+    .legal li { margin-top: .45rem; }
+    .legal a { color: var(--structure); text-decoration: underline; }
+    .toc { margin: 2rem 0 0; padding: 1.3rem 1.5rem; background: var(--paper-2, #f2efe9); border: 1px solid var(--line); border-radius: var(--radius); }
+    .toc p { margin: 0 0 .6rem; font-family: var(--font-mono); font-size: .72rem; letter-spacing: .1em; text-transform: uppercase; color: var(--ink-faint); }
+    .toc ol { margin: 0; padding-left: 1.3rem; columns: 2; column-gap: 2rem; }
+    .toc li { margin-top: .3rem; break-inside: avoid; }
+    .toc a { color: var(--ink-soft); }
     .draft-flag { margin: 1.6rem 0 0; padding: 1rem 1.2rem; border: 1px dashed var(--signal); border-radius: var(--radius); color: var(--ink-soft); font-size: .9rem; }
+    @media (max-width: 560px) { .toc ol { columns: 1; } }
   </style>
 </head>
 <body>
@@ -41,12 +47,35 @@
       <p class="kicker">Legal</p>
       <h1 class="section-title">Términos y condiciones</h1>
       <p class="updated">Última actualización: 15 de agosto de 2026</p>
-      <p class="section-lead">Estas condiciones regulan el uso del sitio <strong>redlocal.cl</strong> y las comunicaciones que inicias con nosotros a través de él.</p>
+      <p class="section-lead">Estas condiciones regulan el uso del sitio <strong>redlocal.cl</strong> y las comunicaciones que inicias con nosotros a través de él. La <a href="/privacidad/">política de privacidad</a> forma parte integrante de estos términos.</p>
 
-      <h2>1. Aceptación</h2>
-      <p>Al acceder y usar este sitio aceptas estos términos. Si no estás de acuerdo con ellos, te pedimos no utilizar el sitio ni sus formularios de contacto.</p>
+      <div class="draft-flag">
+        <strong>Nota:</strong> texto base general de buena fe, no asesoría legal; conviene validarlo con un abogado según el giro y los contratos específicos.
+      </div>
 
-      <h2>2. Identificación del proveedor</h2>
+      <nav class="toc" aria-label="Contenido">
+        <p>Contenido</p>
+        <ol>
+          <li><a href="#aceptacion">Aceptación</a></li>
+          <li><a href="#proveedor">Identificación del proveedor</a></li>
+          <li><a href="#definiciones">Definiciones</a></li>
+          <li><a href="#uso">Objeto y uso del sitio</a></li>
+          <li><a href="#servicios">Servicios y comunicaciones</a></li>
+          <li><a href="#obligaciones">Obligaciones del usuario</a></li>
+          <li><a href="#propiedad">Propiedad intelectual</a></li>
+          <li><a href="#privacidad">Privacidad y datos</a></li>
+          <li><a href="#terceros">Enlaces a terceros</a></li>
+          <li><a href="#responsabilidad">Disponibilidad y responsabilidad</a></li>
+          <li><a href="#cambios">Modificaciones</a></li>
+          <li><a href="#ley">Ley aplicable</a></li>
+          <li><a href="#contacto">Contacto</a></li>
+        </ol>
+      </nav>
+
+      <h2 id="aceptacion">1. Aceptación</h2>
+      <p>Al acceder y usar este sitio aceptas estos términos y la política de privacidad que forma parte de ellos. Si no estás de acuerdo, te pedimos no utilizar el sitio ni sus formularios de contacto.</p>
+
+      <h2 id="proveedor">2. Identificación del proveedor</h2>
       <p>
         Razón social: <strong>RedLocal SpA</strong><br />
         RUT: <strong>78.388.986-2</strong><br />
@@ -54,32 +83,51 @@
         Correo: <a href="mailto:hola@redlocal.cl">hola@redlocal.cl</a>
       </p>
 
-      <h2>3. Uso del sitio</h2>
-      <p>El sitio se ofrece con fines informativos, para dar a conocer los servicios de RedLocal y permitirte contactarnos. Te comprometes a usarlo de buena fe y a no intentar dañarlo, sobrecargarlo, vulnerar su seguridad ni acceder a áreas o datos no destinados a ti.</p>
+      <h2 id="definiciones">3. Definiciones</h2>
+      <ul>
+        <li><strong>Sitio:</strong> el sitio web publicado en redlocal.cl y sus subpáginas.</li>
+        <li><strong>Usuario:</strong> toda persona que accede o usa el Sitio.</li>
+        <li><strong>Servicios:</strong> los servicios de detección de eventos, alertas y automatización que RedLocal ofrece y que se contratan por separado mediante propuesta o contrato.</li>
+        <li><strong>Contenido:</strong> textos, diseño, código, marcas, gráficos y demás materiales del Sitio.</li>
+      </ul>
 
-      <h2>4. Servicios y comunicaciones</h2>
-      <p>El sitio <strong>no vende ni contrata servicios en línea</strong>. Cuando completas el formulario, este prepara un mensaje (por WhatsApp o correo) que tú envías desde tu propia aplicación; con eso inicias una conversación comercial, no un contrato. Cualquier servicio de RedLocal se acuerda por separado, por escrito, en una propuesta específica.</p>
+      <h2 id="uso">4. Objeto y uso del sitio</h2>
+      <p>El Sitio se ofrece con fines informativos: dar a conocer los Servicios de RedLocal y permitirte contactarnos. Te comprometes a usarlo de buena fe y con fines lícitos, y a no intentar dañarlo, sobrecargarlo, vulnerar su seguridad ni acceder a áreas o datos no destinados a ti.</p>
 
-      <h2>5. Propiedad intelectual</h2>
-      <p>El nombre, la marca «RedLocal», el logotipo, los textos, el diseño y el código de este sitio son de RedLocal SpA o se usan con autorización. No puedes reproducirlos ni reutilizarlos con fines comerciales sin nuestro permiso previo por escrito. El contenido citado de terceros pertenece a sus respectivos autores.</p>
+      <h2 id="servicios">5. Servicios y comunicaciones</h2>
+      <p>El Sitio <strong>no vende ni contrata Servicios en línea</strong>. Cuando completas el formulario, este prepara un mensaje (por WhatsApp o correo) que tú envías desde tu propia aplicación; con eso inicias una conversación comercial, no un contrato. La información publicada puede tener carácter referencial. Cualquier Servicio de RedLocal se acuerda por separado, por escrito, mediante una propuesta comercial y/o un contrato de prestación de servicios que prevalece sobre estos términos en lo que regule.</p>
 
-      <h2>6. Enlaces a terceros</h2>
-      <p>El sitio puede enlazar a servicios de terceros (por ejemplo, WhatsApp, nuestro blog o herramientas de analítica). No somos responsables del contenido ni de las prácticas de privacidad de esos terceros; su uso se rige por sus propias condiciones.</p>
+      <h2 id="obligaciones">6. Obligaciones del usuario</h2>
+      <ul>
+        <li>Usar el Sitio conforme a la ley y de buena fe.</li>
+        <li>Entregar información veraz cuando decidas contactarnos.</li>
+        <li>No realizar acciones que afecten la seguridad, disponibilidad o integridad del Sitio, ni los derechos de terceros.</li>
+      </ul>
 
-      <h2>7. Privacidad</h2>
-      <p>El tratamiento de tus datos se rige por nuestra <a href="/privacidad/">política de privacidad</a>, que forma parte de estos términos.</p>
+      <h2 id="propiedad">7. Propiedad intelectual</h2>
+      <p>La marca «RedLocal», el logotipo, los textos, el diseño y el código de este Sitio son de RedLocal SpA o se usan con autorización, y están protegidos por la normativa de propiedad intelectual e industrial. No puedes reproducirlos ni reutilizarlos con fines comerciales sin nuestro permiso previo por escrito. Respetamos de igual forma la propiedad intelectual de nuestros clientes y de terceros. Cualquiera de las partes podrá hacer referencia pública a la relación comercial con fines de difusión, salvo acuerdo distinto por escrito.</p>
 
-      <h2>8. Disponibilidad y responsabilidad</h2>
-      <p>Hacemos un esfuerzo razonable por mantener el sitio disponible y con información correcta, pero se entrega «tal como está», sin garantía de disponibilidad ininterrumpida ni de ausencia de errores. En la medida que lo permita la ley, RedLocal no responde por daños indirectos derivados del uso o la imposibilidad de uso del sitio. Nada en estos términos limita tus derechos como consumidor bajo la Ley N° 19.496.</p>
+      <h2 id="privacidad">8. Privacidad y protección de datos</h2>
+      <p>El tratamiento de tus datos personales se rige por nuestra <a href="/privacidad/">política de privacidad</a>, que forma parte integrante de estos términos y detalla qué datos recolectamos, con qué finalidades y base legal, con quién los compartimos, cuánto los conservamos y cómo ejerces tus derechos conforme a la Ley N° 19.628.</p>
 
-      <h2>9. Cambios</h2>
-      <p>Podemos actualizar estos términos cuando lo necesitemos. La versión vigente es siempre la publicada en esta página, con su fecha de «última actualización». El uso continuado del sitio tras un cambio implica que aceptas la versión actualizada.</p>
+      <h2 id="terceros">9. Enlaces a terceros</h2>
+      <p>El Sitio puede enlazar a servicios de terceros (por ejemplo, WhatsApp, nuestro blog o herramientas de analítica). No somos responsables del contenido ni de las prácticas de privacidad de esos terceros; su uso se rige por sus propias condiciones.</p>
 
-      <h2>10. Ley aplicable</h2>
-      <p>Estos términos se rigen por las leyes de la República de Chile. Cualquier controversia será conocida por los tribunales ordinarios de justicia con competencia en Chile, sin perjuicio de los derechos que la ley reconoce a los consumidores.</p>
+      <h2 id="responsabilidad">10. Disponibilidad y responsabilidad</h2>
+      <p>Hacemos un esfuerzo razonable por mantener el Sitio disponible y con información correcta, pero se entrega «tal como está», sin garantía de disponibilidad ininterrumpida ni de ausencia de errores. En la medida que lo permita la ley, RedLocal no responde por daños indirectos derivados del uso o la imposibilidad de uso del Sitio, ni por interrupciones o fallas ocasionadas por causas fuera de su control razonable —tales como cortes de energía o de acceso a internet, fallas de servidores o de plataformas de terceros, ataques informáticos a sistemas de terceros, desastres naturales, u órdenes de autoridad—. Nada en estos términos limita los derechos que la Ley N° 19.496 sobre Protección de los Derechos de los Consumidores reconoce, cuando resulte aplicable.</p>
 
-      <h2>11. Contacto</h2>
-      <p>RedLocal SpA · Coquimbo, Chile · <a href="mailto:hola@redlocal.cl">hola@redlocal.cl</a></p>
+      <h2 id="cambios">11. Modificaciones</h2>
+      <p>Podemos actualizar estos términos cuando lo necesitemos. La versión vigente es siempre la publicada en esta página, con su fecha de «última actualización». Si los cambios son relevantes, haremos comunicaciones razonables. El uso continuado del Sitio tras un cambio implica que aceptas la versión actualizada.</p>
+
+      <h2 id="ley">12. Ley aplicable y jurisdicción</h2>
+      <p>Estos términos se rigen por las leyes de la República de Chile. Cualquier controversia será conocida por los tribunales ordinarios de justicia con competencia en Chile, sin perjuicio de los derechos que la ley reconoce a los consumidores y de lo que acuerden por escrito las partes en un contrato de servicios específico.</p>
+
+      <h2 id="contacto">13. Contacto</h2>
+      <p>
+        <strong>RedLocal SpA</strong> · RUT 78.388.986-2<br />
+        Coquimbo, Chile<br />
+        Correo: <a href="mailto:hola@redlocal.cl">hola@redlocal.cl</a> · WhatsApp: <a href="https://wa.me/56945818860" target="_blank" rel="noopener">+56 9 4581 8860</a>
+      </p>
     </div>
   </main>
 

@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Política de privacidad · RedLocal</title>
-  <meta name="description" content="Qué datos recopila RedLocal, para qué los usa y cómo los tratamos. Minimización de datos y consentimiento explícito." />
+  <meta name="description" content="Cómo RedLocal SpA trata tus datos personales: qué recolectamos, para qué, con qué base legal, con quién los compartimos, cuánto los conservamos y cómo ejerces tus derechos (Ley 19.628)." />
   <link rel="canonical" href="https://redlocal.cl/privacidad/" />
   <meta name="theme-color" content="#fbfaf7" />
   <meta name="robots" content="index,follow" />
@@ -14,12 +14,23 @@
   <link rel="preload" href="../assets/fonts/jetbrains-mono-latin.woff2" as="font" type="font/woff2" crossorigin />
   <link rel="stylesheet" href="../styles.css" />
   <style>
-    .legal { max-width: 46rem; }
-    .legal h2 { font-size: 1.3rem; margin-top: 2.2rem; }
-    .legal p, .legal ul { margin-top: .9rem; color: var(--ink-soft); }
-    .legal ul { padding-left: 1.2rem; }
-    .legal li { margin-top: .4rem; }
+    .legal { max-width: 48rem; }
+    .legal .updated { font-family: var(--font-mono); font-size: .78rem; color: var(--ink-faint); text-transform: uppercase; letter-spacing: .06em; }
+    .legal h2 { font-size: 1.35rem; margin-top: 2.6rem; scroll-margin-top: 5rem; }
+    .legal h3 { font-size: 1.05rem; margin-top: 1.6rem; }
+    .legal p, .legal ul, .legal ol, .legal dl { margin-top: .9rem; color: var(--ink-soft); }
+    .legal ul, .legal ol { padding-left: 1.2rem; }
+    .legal li { margin-top: .45rem; }
     .legal a { color: var(--structure); text-decoration: underline; }
+    .legal dl { display: grid; gap: .8rem; }
+    .legal dt { font-weight: 600; color: var(--ink); }
+    .legal dd { margin: .2rem 0 0; }
+    .toc { margin: 2rem 0 0; padding: 1.3rem 1.5rem; background: var(--paper-2, #f2efe9); border: 1px solid var(--line); border-radius: var(--radius); }
+    .toc p { margin: 0 0 .6rem; font-family: var(--font-mono); font-size: .72rem; letter-spacing: .1em; text-transform: uppercase; color: var(--ink-faint); }
+    .toc ol { margin: 0; padding-left: 1.3rem; columns: 2; column-gap: 2rem; }
+    .toc li { margin-top: .3rem; break-inside: avoid; }
+    .toc a { color: var(--ink-soft); }
+    @media (max-width: 560px) { .toc ol { columns: 1; } }
   </style>
 </head>
 <body>
@@ -38,25 +49,160 @@
     <div class="container legal">
       <p class="kicker">Privacidad</p>
       <h1 class="section-title">Política de privacidad</h1>
-      <p class="section-lead">Recopilamos lo mínimo necesario para responderte y nada más. Sin cookies de seguimiento ni venta de datos.</p>
+      <p class="updated">Última actualización: 15 de agosto de 2026</p>
+      <p class="section-lead">Recopilamos lo mínimo necesario para responderte y prestarte el servicio, nada más. Sin cookies de seguimiento ni venta de datos. Esta política explica en detalle cómo <strong>RedLocal SpA</strong> trata tus datos personales, conforme a la Ley N° 19.628 sobre Protección de la Vida Privada.</p>
 
-      <h2>Qué datos recopilamos</h2>
-      <p>Solo lo que tú nos entregas en el formulario o al escribirnos: la descripción del evento que quieres detectar, dónde ocurre, quién debe enterarse, el impacto, el canal deseado y tus datos de contacto (nombre, correo y, opcionalmente, empresa y teléfono).</p>
+      <nav class="toc" aria-label="Contenido">
+        <p>Contenido</p>
+        <ol>
+          <li><a href="#alcance">Alcance y responsable</a></li>
+          <li><a href="#definiciones">Definiciones</a></li>
+          <li><a href="#datos">Datos que recolectamos</a></li>
+          <li><a href="#finalidades">Finalidades del tratamiento</a></li>
+          <li><a href="#bases">Bases legales</a></li>
+          <li><a href="#comunicacion">Comunicación y encargados</a></li>
+          <li><a href="#internacional">Transferencias internacionales</a></li>
+          <li><a href="#conservacion">Conservación de los datos</a></li>
+          <li><a href="#seguridad">Seguridad de la información</a></li>
+          <li><a href="#derechos">Tus derechos (ARCO)</a></li>
+          <li><a href="#ejercicio">Cómo ejercer tus derechos</a></li>
+          <li><a href="#revocacion">Revocación del consentimiento</a></li>
+          <li><a href="#menores">Datos de menores de edad</a></li>
+          <li><a href="#cookies">Cookies y seguimiento</a></li>
+          <li><a href="#terceros">Enlaces a terceros</a></li>
+          <li><a href="#cambios">Cambios a esta política</a></li>
+          <li><a href="#contacto">Contacto</a></li>
+        </ol>
+      </nav>
 
-      <h2>Para qué los usamos</h2>
-      <p>Únicamente para responder tu consulta y evaluar la factibilidad de tu caso. No los usamos para publicidad ni los compartimos ni vendemos a terceros.</p>
+      <h2 id="alcance">1. Alcance y responsable</h2>
+      <p>Esta política regula el tratamiento de datos personales que realiza <strong>RedLocal SpA</strong> (RUT 78.388.986-2), con domicilio en Coquimbo, Chile, en su calidad de responsable del tratamiento. Se aplica a:</p>
+      <ul>
+        <li>Visitantes de <strong>redlocal.cl</strong> y de las páginas del sitio.</li>
+        <li>Personas que nos escriben o completan el formulario de contacto.</li>
+        <li>Clientes y proveedores con quienes mantenemos una relación comercial.</li>
+        <li>Cualquier persona natural cuyos datos personales tratemos.</li>
+      </ul>
+      <p>En proyectos donde tratamos datos por cuenta de un cliente (por ejemplo, al operar un sistema de alertas para su organización), actuamos como <em>encargados</em> del tratamiento y nos regimos por el contrato respectivo y sus instrucciones.</p>
 
-      <h2>Cómo se envían</h2>
-      <p>Al completar el formulario, se abre WhatsApp o tu correo con el resumen del caso; el envío lo confirmas tú desde tu propia aplicación. Guardamos un borrador local (en tu navegador) de los pasos no sensibles para que no pierdas el avance; puedes borrarlo limpiando los datos del sitio.</p>
+      <h2 id="definiciones">2. Definiciones</h2>
+      <dl>
+        <dt>Dato personal</dt><dd>Cualquier información relativa a una persona natural identificada o identificable (nombre, RUT, correo, teléfono).</dd>
+        <dt>Dato sensible</dt><dd>Datos que revelan origen racial, creencias, salud, vida sexual, datos biométricos, etc. No solicitamos datos sensibles y te pedimos no incluirlos en el formulario.</dd>
+        <dt>Tratamiento</dt><dd>Cualquier operación sobre datos: recolección, almacenamiento, uso, transmisión o eliminación.</dd>
+        <dt>Titular</dt><dd>La persona natural a quien pertenecen los datos.</dd>
+        <dt>Responsable</dt><dd>RedLocal SpA, que decide las finalidades y medios del tratamiento.</dd>
+        <dt>Encargado</dt><dd>Un tercero que trata datos por cuenta del responsable (por ejemplo, un proveedor de infraestructura en la nube).</dd>
+        <dt>Transferencia internacional</dt><dd>Envío o acceso a datos desde un país distinto a Chile.</dd>
+        <dt>Incidente de seguridad</dt><dd>Suceso que compromete o probablemente comprometa la confidencialidad, integridad o disponibilidad de datos personales.</dd>
+      </dl>
 
-      <h2>Analítica</h2>
-      <p>Usamos <a href="https://plausible.io/privacy-focused-web-analytics" target="_blank" rel="noopener">Plausible</a>, una herramienta de analítica sin cookies que no recopila datos personales ni construye perfiles. Solo medimos métricas agregadas de uso (páginas vistas, clics en botones) para mejorar el sitio. No registramos el texto que escribes en el formulario.</p>
+      <h2 id="datos">3. Datos que recolectamos</h2>
+      <h3>3.1 Datos que nos entregas directamente</h3>
+      <ul>
+        <li><strong>Del formulario de contacto:</strong> la descripción del evento que quieres detectar, dónde ocurre, quién debe enterarse, el impacto y el canal deseado.</li>
+        <li><strong>De contacto e identificación:</strong> nombre, correo electrónico y, opcionalmente, empresa y teléfono.</li>
+        <li><strong>Contractuales:</strong> si avanzamos a una relación comercial, los datos necesarios para propuestas, facturación, firma y soporte.</li>
+      </ul>
+      <h3>3.2 Datos que se recolectan automáticamente</h3>
+      <ul>
+        <li><strong>Técnicos y de uso:</strong> métricas agregadas de navegación (páginas vistas, clics en botones) mediante analítica sin cookies, y registros (logs) de servidor con fines de seguridad y funcionamiento.</li>
+        <li><strong>Ubicación aproximada:</strong> a lo más, la inferida a partir de la IP para estadística agregada. No usamos geolocalización precisa.</li>
+      </ul>
+      <p>No registramos el texto que escribes en el formulario mediante herramientas de analítica.</p>
+      <h3>3.3 Datos provenientes de terceros</h3>
+      <p>En general no recolectamos tus datos desde terceros. Si en un proyecto específico fuera necesario (por ejemplo, datos que un cliente nos entrega para operar su sistema), lo haremos con base legal y conforme al contrato.</p>
 
-      <h2>Consentimiento</h2>
-      <p>Antes de enviar tus datos de contacto marcas una casilla de consentimiento explícito. Puedes pedirnos en cualquier momento que eliminemos tu información escribiendo a <a href="mailto:hola@redlocal.cl">hola@redlocal.cl</a>.</p>
+      <h2 id="finalidades">4. Finalidades del tratamiento</h2>
+      <p>Tratamos datos personales para:</p>
+      <ol>
+        <li><strong>Responder tu consulta</strong> y evaluar la factibilidad técnica de tu caso.</li>
+        <li><strong>Gestionar la relación comercial:</strong> propuestas, contratos, facturación, atención y soporte.</li>
+        <li><strong>Cumplir obligaciones legales</strong> tributarias, contables y regulatorias, y atender requerimientos de autoridades.</li>
+        <li><strong>Seguridad y continuidad:</strong> prevención de fraude y abuso, monitoreo y gestión de incidentes.</li>
+        <li><strong>Mejorar el sitio y el servicio</strong> mediante métricas agregadas de uso.</li>
+      </ol>
+      <p>No usamos tus datos para publicidad ni los vendemos. No los usaremos para finalidades incompatibles con las aquí informadas; si surge una nueva finalidad, pediremos tu consentimiento cuando corresponda.</p>
 
-      <h2>Contacto</h2>
-      <p>RedLocal SpA · Coquimbo, Chile · <a href="mailto:hola@redlocal.cl">hola@redlocal.cl</a></p>
+      <h2 id="bases">5. Bases legales</h2>
+      <ul>
+        <li><strong>Consentimiento</strong> (Ley 19.628): al marcar la casilla del formulario antes de enviarnos tus datos de contacto.</li>
+        <li><strong>Ejecución de un contrato o precontrato:</strong> para gestionar la relación con clientes y proveedores.</li>
+        <li><strong>Obligación legal:</strong> cumplimiento tributario, contable y regulatorio.</li>
+        <li><strong>Interés legítimo</strong> (proporcional y con resguardos): seguridad, prevención de fraude y mejora del servicio.</li>
+      </ul>
+
+      <h2 id="comunicacion">6. Comunicación de datos y encargados</h2>
+      <p>No vendemos ni cedemos tus datos. Podemos compartirlos, en la medida necesaria, con:</p>
+      <ul>
+        <li><strong>Proveedores que actúan como encargados:</strong> infraestructura y hosting (Cloudflare), proveedores de modelos de inteligencia artificial (Anthropic, OpenAI), analítica sin cookies (Plausible) y, según el canal que elijas para contactarnos, mensajería (por ejemplo, WhatsApp). Nuestra gestión comercial de contactos se realiza en un CRM autohospedado por RedLocal.</li>
+        <li><strong>Autoridades</strong> administrativas, tributarias o judiciales, cuando exista una obligación o requerimiento legal.</li>
+      </ul>
+      <p>A nuestros encargados les exigimos obligaciones de confidencialidad, seguridad y uso limitado a la finalidad instruida.</p>
+
+      <h2 id="internacional">7. Transferencias internacionales</h2>
+      <p>Parte de nuestra operación se apoya en proveedores ubicados fuera de Chile —principalmente en Estados Unidos— para hosting, procesamiento con modelos de IA y mensajería. Esto implica que algunos datos pueden ser alojados o accedidos desde el extranjero. En esos casos aplicamos cláusulas contractuales y medidas técnicas (cifrado en tránsito, minimización, control de acceso) orientadas a un nivel de protección equivalente al exigido por la normativa chilena y a buenas prácticas inspiradas en el GDPR.</p>
+
+      <h2 id="conservacion">8. Conservación de los datos</h2>
+      <p>Conservamos los datos solo por el tiempo necesario para cumplir las finalidades o las exigencias legales:</p>
+      <ul>
+        <li><strong>Consultas y contactos:</strong> hasta 24 meses desde el último contacto, salvo que exista una relación comercial vigente o que solicites su eliminación antes.</li>
+        <li><strong>Clientes y proveedores:</strong> durante la vigencia del contrato y hasta 5 años adicionales para atender obligaciones y prescripciones legales.</li>
+        <li><strong>Borrador del formulario:</strong> se guarda en tu propio navegador (<code>localStorage</code>) y lo eliminas tú al limpiar los datos del sitio.</li>
+        <li><strong>Registros de seguridad (logs):</strong> por plazos acotados, según criterios de riesgo.</li>
+      </ul>
+      <p>Cumplidos los plazos, eliminamos de forma segura o anonimizamos los datos, salvo obligación legal en contrario.</p>
+
+      <h2 id="seguridad">9. Seguridad de la información</h2>
+      <p>Aplicamos medidas técnicas y organizativas razonables y proporcionales a nuestro tamaño, alineadas a buenas prácticas de seguridad (no contamos con una certificación formal). Entre ellas:</p>
+      <ul>
+        <li>Cifrado en tránsito (HTTPS/HSTS) y una política de seguridad de contenidos (CSP) estricta en el sitio.</li>
+        <li>Control de acceso con privilegio mínimo y monitoreo de seguridad sobre nuestra infraestructura autohospedada.</li>
+        <li>Respaldos y separación de ambientes.</li>
+      </ul>
+      <p>Ninguna medida es infalible. Si detectamos un incidente de seguridad que afecte significativamente tus datos personales, te lo notificaremos sin dilación indebida, conforme a la ley y a nuestros procedimientos internos, e informaremos las medidas adoptadas.</p>
+
+      <h2 id="derechos">10. Tus derechos (ARCO)</h2>
+      <p>De acuerdo con la Ley 19.628, puedes ejercer los derechos de:</p>
+      <ul>
+        <li><strong>Acceso:</strong> saber si tratamos tus datos y obtener copia o descripción de ellos.</li>
+        <li><strong>Rectificación:</strong> corregir datos inexactos o incompletos.</li>
+        <li><strong>Cancelación/eliminación:</strong> solicitar su supresión cuando proceda.</li>
+        <li><strong>Oposición:</strong> oponerte a tratamientos no obligatorios por ley o contrato.</li>
+      </ul>
+      <p>Cuando resulte aplicable, atenderemos también portabilidad y limitación del tratamiento como buena práctica.</p>
+
+      <h2 id="ejercicio">11. Cómo ejercer tus derechos</h2>
+      <p>Escríbenos a <a href="mailto:hola@redlocal.cl">hola@redlocal.cl</a> indicando tu nombre completo, tu identificación (por ejemplo, RUT) y el derecho que deseas ejercer. Podremos pedirte una verificación de identidad para proteger la confidencialidad. Responderemos en un plazo razonable y proporcional a la complejidad de la solicitud (como referencia interna, dentro de 15 días hábiles, prorrogables con aviso justificado). El ejercicio de derechos es gratuito.</p>
+
+      <h2 id="revocacion">12. Revocación del consentimiento</h2>
+      <p>Puedes revocar tu consentimiento en cualquier momento escribiendo a <a href="mailto:hola@redlocal.cl">hola@redlocal.cl</a>. La revocación no afecta la licitud del tratamiento realizado antes de ella.</p>
+
+      <h2 id="menores">13. Datos de menores de edad</h2>
+      <p>Nuestros servicios no están dirigidos a menores de 18 años y no recolectamos deliberadamente sus datos. Si identificamos datos de un menor sin autorización de su representante, los eliminaremos de forma diligente.</p>
+
+      <h2 id="cookies">14. Cookies y tecnologías de seguimiento</h2>
+      <p>El sitio funciona sin cookies de seguimiento ni publicitarias. En concreto:</p>
+      <ul>
+        <li><strong>Analítica:</strong> usamos <a href="https://plausible.io/privacy-focused-web-analytics" target="_blank" rel="noopener">Plausible</a>, una herramienta sin cookies que no construye perfiles; solo mide métricas agregadas.</li>
+        <li><strong>Almacenamiento local:</strong> guardamos un borrador de los pasos no sensibles del formulario en tu navegador (<code>localStorage</code>), para que no pierdas el avance. Lo borras limpiando los datos del sitio.</li>
+        <li><strong>Sin publicidad segmentada</strong> ni cookies de terceros con fines de marketing.</li>
+      </ul>
+
+      <h2 id="terceros">15. Enlaces a terceros</h2>
+      <p>El sitio puede enlazar a servicios de terceros (por ejemplo, WhatsApp o nuestro blog). Sus prácticas de privacidad son propias; te recomendamos revisar sus políticas antes de usarlos.</p>
+
+      <h2 id="cambios">16. Cambios a esta política</h2>
+      <p>Podemos actualizar esta política para reflejar cambios legales, técnicos u operativos. La versión vigente es siempre la publicada en esta página, con su fecha de «última actualización». Si los cambios son relevantes, haremos comunicaciones razonables.</p>
+
+      <h2 id="contacto">17. Contacto</h2>
+      <p>Para dudas o para ejercer tus derechos:</p>
+      <p>
+        <strong>RedLocal SpA</strong> · RUT 78.388.986-2<br />
+        Coquimbo, Chile<br />
+        Correo: <a href="mailto:hola@redlocal.cl">hola@redlocal.cl</a> · WhatsApp: <a href="https://wa.me/56945818860" target="_blank" rel="noopener">+56 9 4581 8860</a>
+      </p>
+      <p>Consulta también nuestros <a href="/terminos/">términos y condiciones</a>, de los que esta política forma parte.</p>
     </div>
   </main>
 
