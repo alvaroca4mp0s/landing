@@ -1,0 +1,22 @@
+# RedLocal
+
+> RedLocal es una empresa técnica de Coquimbo, Chile, que construye sistemas que detectan eventos, filtran el ruido y avisan a la persona correcta por el canal correcto (WhatsApp, Telegram, SMS, correo). Convierte señales dispersas —sensores, formularios, enlaces, precios, logs— en alertas accionables.
+
+## Qué hace RedLocal
+
+- Detección de eventos y sistemas de alertas a medida.
+- Filtrado de ruido: solo avisa cuando algo realmente importa.
+- Entrega multicanal: la alerta llega a quien corresponde, donde la va a ver.
+- Enfoque honesto por madurez: prototipo, demostración o sistema interno en producción.
+
+## Páginas
+
+- [Inicio](https://redlocal.cl/): qué construye RedLocal, cómo funciona el flujo evento → señal → acción, categorías, escenarios y contacto.
+- [Diagnóstico Express OT](https://redlocal.cl/diagnostico-ot/): oferta acotada de diagnóstico de monitoreo/alertas para entornos OT (tecnología operacional). Incluye alcance explícito y exclusiones.
+- [Política de privacidad](https://redlocal.cl/privacidad/): qué datos se recopilan, para qué y cómo se tratan.
+
+## Contacto
+
+- Correo: hola@redlocal.cl
+- WhatsApp: +56 9 4581 8860
+- Ubicación: Coquimbo, Chile

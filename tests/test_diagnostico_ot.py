@@ -67,7 +67,7 @@ class DiagnosticoOtContractTests(unittest.TestCase):
         self.assertTrue(any(link.startswith("https://wa.me/56945818860") for link in self.links))
         self.assertTrue(any(link.startswith("mailto:hola@redlocal.cl") for link in self.links))
         self.assertIn("#reunion", self.links)
-        self.assertIn("../privacidad.html", self.links)
+        self.assertIn("/privacidad/", self.links)
 
     def test_page_has_complete_indexable_seo_metadata(self):
         metas = {

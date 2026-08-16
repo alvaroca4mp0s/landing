@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="es-CL">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Señal perdida (404) · RedLocal</title>
+  <meta name="description" content="La página que buscas no existe o cambió de dirección." />
+  <meta name="robots" content="noindex,follow" />
+  <meta name="theme-color" content="#fbfaf7" />
+  <link rel="icon" type="image/png" href="/assets/iso.png" />
+  <link rel="preload" href="/assets/fonts/inter-latin.woff2" as="font" type="font/woff2" crossorigin />
+  <link rel="preload" href="/assets/fonts/space-grotesk-latin.woff2" as="font" type="font/woff2" crossorigin />
+  <link rel="preload" href="/assets/fonts/jetbrains-mono-latin.woff2" as="font" type="font/woff2" crossorigin />
+  <link rel="stylesheet" href="/styles.css" />
+  <style>
+    .notfound { min-height: 62vh; display: grid; align-content: center; }
+    .notfound .code { font-family: var(--font-mono); color: var(--signal-strong); letter-spacing: .1em; }
+    .notfound h1 { margin-top: .6rem; max-width: 18ch; }
+    .notfound p { margin-top: 1rem; max-width: 52ch; color: var(--ink-soft); }
+    .notfound .actions { margin-top: 2rem; display: flex; flex-wrap: wrap; gap: .75rem; }
+  </style>
+</head>
+<body>
+  <a class="skip-link" href="#contenido">Saltar al contenido</a>
+  <header class="site-header">
+    <div class="container nav">
+      <a class="brand" href="/" aria-label="RedLocal — inicio">
+        <span class="brand-dot" aria-hidden="true"></span>
+        <span class="brand-word"><span class="brand-red">Red</span><span class="brand-blue">Local</span></span>
+      </a>
+      <a class="btn btn--ghost btn--sm" href="/">← Inicio</a>
+    </div>
+  </header>
+
+  <main class="section" id="contenido">
+    <div class="container notfound">
+      <p class="code">ERROR 404 · SEÑAL PERDIDA</p>
+      <h1 class="section-title">Esta ruta no llegó a destino.</h1>
+      <p>La página que buscas no existe o cambió de dirección. Volvamos a un lugar con señal.</p>
+      <div class="actions">
+        <a class="btn btn--primary" href="/">Ir al inicio</a>
+        <a class="btn btn--ghost" href="/diagnostico-ot/">Diagnóstico Express OT</a>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-base">
+      <div class="container footer-base-row">
+        <p>© <span id="year">2026</span> RedLocal SpA. Todos los derechos reservados.</p>
+        <p class="meta">evento → señal → acción</p>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
