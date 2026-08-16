@@ -322,6 +322,7 @@ textarea:focus, .lead-form input:focus { outline: none; border-color: var(--stru
 .footer-grid { display: grid; gap: 2.5rem; padding: 3.5rem 1.25rem; }
 @media (min-width: 768px) { .footer-grid { grid-template-columns: 1.5fr 1fr 1fr; padding-inline: 2rem; } }
 .footer-tag { margin-top: 1rem; color: var(--ink-soft); font-size: .92rem; max-width: 34ch; }
+.footer-tag + .meta { margin-top: 1rem; }
 .footer-h { margin-bottom: .9rem; }
 .footer-links { list-style: none; margin: 0; padding: 0; display: grid; gap: .55rem; font-size: .92rem; }
 .footer-links a { color: var(--ink-soft); }

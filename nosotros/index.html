@@ -65,7 +65,6 @@
     .formula { overflow-x: auto; margin: 1.4rem 0 0; padding: 1.3rem 1.4rem; background: var(--ink); color: var(--paper); font-family: var(--font-mono); font-size: .85rem; line-height: 1.75; border-radius: var(--radius); }
     .formula .c { color: var(--on-dark-faint); }
     .about .wink { margin-top: 1rem; color: var(--ink-faint); font-style: italic; }
-    .about h2 .cite { font-family: var(--font-mono); font-size: .62em; color: var(--ink-faint); letter-spacing: .04em; }
     @media (min-width: 720px) { .value-grid { grid-template-columns: repeat(2, 1fr); } }
   </style>
 </head>
@@ -91,8 +90,12 @@
       <p>RedLocal nació en 2026 en Coquimbo, con una idea fija: la mayoría de los problemas no aparecen de golpe — avisan antes, en una señal que nadie estaba mirando. Un enlace que se degrada, un sensor fuera de rango, un precio que se movió, un log que empezó a repetir un error.</p>
       <p>Empezamos automatizando nuestra propia operación y terminamos construyendo lo mismo para otros: sistemas que vigilan, deciden qué merece interrumpir a una persona y lo entregan a tiempo.</p>
 
-      <h2>Nuestra tesis salió de un paper de 2017 <span class="cite">Vaswani et&nbsp;al.</span></h2>
-      <p>En 2017, ocho investigadores publicaron «<a href="https://arxiv.org/abs/1706.03762" target="_blank" rel="noopener">Attention Is All You Need</a>» y, sin querer, le pusieron nombre a nuestro modelo de negocio. La idea del <em>transformer</em> es simple y terca: no proceses todo por igual — calcula qué merece <strong>atención</strong> y deja pasar el resto. Cambia «tokens» por «eventos» y «el modelo» por «tu equipo», y tienes <a href="/#noise"><strong>NOISE</strong></a>, nuestra disciplina base: la atención es el recurso más escaso de una organización, así que el sistema decide qué se gana el derecho a interrumpir a una persona.</p>
+      <h2>Quiénes somos</h2>
+      <p>No tenemos un organigrama. RedLocal opera con una plantilla de <strong>~20 agentes de IA</strong> orquestados sobre modelos de <strong>Anthropic</strong> y <strong>OpenAI</strong>, cada uno especializado en una parte del trabajo: vigilar señales, escribir e integrar código, revisar, documentar y responder. Todo bajo dirección humana, que define el criterio y responde por el resultado.</p>
+      <p>En la práctica avanzamos como un equipo grande sin el peso de uno: más trabajo en paralelo, respuestas rápidas y un costo que se traspasa a lo que cobramos. Hablas directo con quien decide, no con un intermediario.</p>
+
+      <h2>Nuestra tesis salió de un paper de 2017</h2>
+      <p>En 2017, ocho investigadores de Google publicaron «<a href="https://arxiv.org/abs/1706.03762" target="_blank" rel="noopener">Attention Is All You Need</a>» y, sin querer, le pusieron nombre a nuestro modelo de negocio. La idea del <em>transformer</em> es simple y terca: no proceses todo por igual — calcula qué merece <strong>atención</strong> y deja pasar el resto. Cambia «tokens» por «eventos» y «el modelo» por «tu equipo», y tienes <a href="/#noise"><strong>NOISE</strong></a>, nuestra disciplina base: la atención es el recurso más escaso de una organización, así que el sistema decide qué se gana el derecho a interrumpir a una persona.</p>
 
       <pre class="formula"><span class="c">// NOISE, resumido en la línea que no cabía en el paper</span>
 señal = softmax( relevancia / ruido ) · contexto
@@ -100,12 +103,8 @@ señal = softmax( relevancia / ruido ) · contexto
 <span class="c">// y recién entonces:</span>
 if (señal.se_lo_gano) interrumpir(a_quien_puede_actuar)</pre>
 
-      <p>La ironía no se nos escapa: para cuidar <em>tu</em> atención, montamos una empresa que corre sobre ~20 <em>transformers</em> (los agentes de Anthropic y OpenAI de más arriba). Máquinas cuyo único gran truco es, justamente, la atención — trabajando a jornada completa para que ningún humano tenga que gastar la suya mirando un dashboard a las 3 de la mañana.</p>
-      <p class="wink">La diferencia con el paper original: ellos juntaron cien mil citas; nosotros, un WhatsApp que <em>sí</em> abres.</p>
-
-      <h2>Quiénes somos</h2>
-      <p>No tenemos un organigrama. RedLocal opera con una plantilla de <strong>~20 agentes de IA</strong> orquestados sobre modelos de <strong>Anthropic</strong> y <strong>OpenAI</strong>, cada uno especializado en una parte del trabajo: vigilar señales, escribir e integrar código, revisar, documentar y responder. Todo bajo dirección humana, que define el criterio y responde por el resultado.</p>
-      <p>En la práctica significa que avanzamos como un equipo grande sin el peso de uno: más superficie de trabajo en paralelo, respuestas rápidas y un costo que se traspasa a lo que cobramos. Hablas directo con quien decide, no con un intermediario.</p>
+      <p>La ironía no se nos escapa: esos mismos ~20 agentes son <em>transformers</em>, máquinas cuyo único gran truco es la atención. Los pusimos a jornada completa en algo muy concreto: cuidar la <em>tuya</em>, para que ningún humano tenga que gastarla mirando un dashboard a las 3 de la mañana.</p>
+      <p class="wink">Un investigador mide su impacto en las veces que lo citan; nosotros lo medimos en algo más simple: una alerta que la persona correcta abre y acciona a tiempo.</p>
 
       <h2>Cómo trabajamos</h2>
       <div class="value-grid">
